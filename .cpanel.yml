@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    # go2cut.co.uk web kökü
+    - export DP=/home/uyarisco/public_html_go2cut_co_uk
+    # CERRAHİ: sadece bu repo'da GÜNCEL olduğundan emin olduğum dosyalar kopyalanır.
+    # Hiçbir şey SİLİNMEZ; canlıdaki privacy.html/cookie.html/app.html/links.html vb. DOKUNULMAZ.
+    - /bin/cp -f index.html "$DP/index.html"
+    - /bin/cp -f store.html "$DP/store.html"
+    - /bin/cp -f .htaccess "$DP/.htaccess"
