@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html class="dark" lang="en-GB"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Go2Cut — 0% Commission Barber Booking App for UK Barbers</title>
+<meta name="description" content="Join Go2Cut, the 0% commission barber booking app for UK barbers. Take appointments, fill empty chairs with instant local deals, and keep 100% of your earnings. Coming soon to the App Store &amp; Google Play."/>
+<meta name="keywords" content="barber booking app, 0% commission barber app, barber appointment app UK, barber booking software, barber app, book a barber, fill empty chairs, get more barber clients, barber scheduling app, barber shop app UK"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="author" content="Go2Cut (Egeo Labs)"/>
+<meta name="google-site-verification" content="PvMhf_lh2hE4VQGPGJ06208nv52HuC0YyRgXJ_QD_-0"/>
+<!-- Google Consent Mode v2 — varsayilan DENIED (UK GDPR/PECR); kullanici kabul edene kadar cerez yok -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+  try {
+    if (localStorage.getItem('g2c_consent') === 'granted') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted', 'analytics_storage': 'granted',
+        'ad_user_data': 'granted', 'ad_personalization': 'granted'
+      });
+    }
+  } catch (e) {}
+</script>
+<!-- Google Analytics (GA4) + Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9NNZSZ8JMQ"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-9NNZSZ8JMQ');
+  gtag('config', 'AW-18227285132');
+</script>
+<meta name="theme-color" content="#131313"/>
+<link rel="canonical" href="https://go2cut.co.uk/"/>
+<link rel="icon" type="image/png" href="logo.png"/>
+<link rel="apple-touch-icon" href="logo.png"/>
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Go2Cut"/>
+<meta property="og:title" content="Go2Cut — 0% Commission Barber Booking App for UK Barbers"/>
+<meta property="og:description" content="Take barber appointments with 0% commission and fill empty chairs with instant deals to every customer within 2 miles. Coming soon to iOS &amp; Android."/>
+<meta property="og:url" content="https://go2cut.co.uk/"/>
+<meta property="og:image" content="https://go2cut.co.uk/bg.jpg"/>
+<meta property="og:image:width" content="1600"/>
+<meta property="og:image:height" content="900"/>
+<meta property="og:image:alt" content="Go2Cut — premium barber booking app for UK barbers"/>
+<meta property="og:locale" content="en_GB"/>
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Go2Cut — 0% Commission Barber Booking App for UK Barbers"/>
+<meta name="twitter:description" content="Take barber appointments with 0% commission and fill empty chairs with instant local deals. Coming soon to iOS &amp; Android."/>
+<meta name="twitter:image" content="https://go2cut.co.uk/bg.jpg"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: { extend: {
+                colors: {
+                    "outline": "#998f81", "outline-variant": "#4d463a",
+                    "on-surface-variant": "#d0c5b5", "on-surface": "#e5e2e1",
+                    "surface": "#131313", "surface-variant": "#353534",
+                    "surface-container-lowest": "#0e0e0e", "surface-container-low": "#1c1b1b",
+                    "surface-container": "#201f1f", "surface-container-high": "#2a2a2a",
+                    "primary": "#e5c484", "primary-container": "#c8a96b",
+                    "on-primary": "#402d00", "on-primary-container": "#533d09",
+                    "background": "#131313", "on-background": "#e5e2e1"
+                },
+                borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                spacing: { "container-max": "1280px", "gutter": "32px", "section-gap": "120px", "margin-desktop": "80px" },
+                fontFamily: {
+                    "button": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"], "headline-md": ["Playfair Display"], "headline-xl": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"], "display-lg-mobile": ["Playfair Display"]
+                },
+                fontSize: {
+                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                }
+            } }
+        }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .text-gradient { background: linear-gradient(to right, #e5c484, #c8a96b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .social-ico { width: 18px; height: 18px; }
+        /* Dim full-page background image (drop your banner in as bg.jpg) */
+        .bg-image { position: fixed; inset: 0; z-index: -2; background: url('bg.jpg') center center / cover no-repeat; opacity: 0.42; }
+        .bg-tint { position: fixed; inset: 0; z-index: -1; background: radial-gradient(120% 80% at 70% 0%, rgba(200,169,107,0.08), transparent 60%), linear-gradient(to bottom, rgba(19,19,19,0.45), rgba(19,19,19,0.82)); }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://go2cut.co.uk/#organization",
+      "name": "Go2Cut",
+      "url": "https://go2cut.co.uk/",
+      "logo": "https://go2cut.co.uk/logo.png",
+      "description": "Go2Cut is a 0% commission barber booking app for UK barbers — take appointments, fill empty chairs with instant local deals, and keep 100% of your earnings.",
+      "sameAs": [
+        "https://www.instagram.com/go2cutapp/",
+        "https://www.tiktok.com/@go2cut",
+        "https://www.youtube.com/@Go2Cut-l5y"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://go2cut.co.uk/#website",
+      "url": "https://go2cut.co.uk/",
+      "name": "Go2Cut",
+      "inLanguage": "en-GB",
+      "publisher": { "@id": "https://go2cut.co.uk/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Go2Cut",
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "BusinessApplication",
+      "description": "0% commission barber booking app: manage appointments, fill empty chairs with instant 2-mile campaigns, and keep 100% of your service revenue.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is Go2Cut really 0% commission for barbers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Go2Cut charges 0% commission on your bookings, so you keep 100% of your service revenue." } },
+        { "@type": "Question", "name": "How does Go2Cut help barbers get more clients?", "acceptedAnswer": { "@type": "Answer", "text": "When you have an empty slot, create an Instant Campaign and Go2Cut sends a push notification to every customer using the app within 2 miles of your shop, filling the chair fast." } },
+        { "@type": "Question", "name": "How much does the Go2Cut barber app cost?", "acceptedAnswer": { "@type": "Answer", "text": "There is no booking commission and no setup fee. Join the waitlist to become a founding barber." } },
+        { "@type": "Question", "name": "When does the Go2Cut app launch?", "acceptedAnswer": { "@type": "Answer", "text": "Go2Cut is launching soon on the App Store and Google Play. Apply now to be one of the first 100 shops, featured free for a full month at launch." } },
+        { "@type": "Question", "name": "Where is Go2Cut available?", "acceptedAnswer": { "@type": "Answer", "text": "Go2Cut is launching across the United Kingdom. Register your shop now to go live in your area from day one." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">
+<div class="bg-image"></div>
+<div class="bg-tint"></div>
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/10">
+<nav class="flex justify-between items-center w-full px-6 md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="flex items-center gap-3" href="#top"><img alt="Go2Cut barber booking app logo" class="h-12 md:h-14 w-auto" src="logo.png"/><span class="hidden sm:inline font-label-caps text-[10px] text-primary uppercase tracking-[0.2em] border-l border-outline-variant/20 pl-3">100% Free Barber App</span></a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#how">How It Works</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#barbers">For Barbers</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#customers">For Customers</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#faq">FAQ</a>
+</div>
+<div class="flex items-center gap-2 sm:gap-3">
+<a class="inline-flex items-center gap-1.5 font-button text-button border border-primary text-primary bg-primary/10 px-3 py-2.5 sm:px-5 sm:py-3 rounded-DEFAULT hover:bg-primary hover:text-on-primary transition-all uppercase" href="store.html"><span aria-hidden="true">🛍️</span> Store</a>
+<span id="g2c-acct"><a id="g2c-signin" class="font-button text-button border border-primary text-primary px-3 py-2.5 sm:px-6 sm:py-3 rounded-DEFAULT hover:bg-primary/10 transition-all uppercase cursor-pointer" href="javascript:void(0)"><span class="sm:hidden">Sign in</span><span class="hidden sm:inline">Sign in / Register</span></a></span>
+</div>
+</nav>
+</header>
+<main class="pt-32" id="top">
+<!-- Hero -->
+<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-16 md:py-24">
+<div class="grid lg:grid-cols-12 gap-gutter lg:gap-12 items-center">
+<div class="lg:col-span-7">
+<span class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary border border-primary/30 rounded-full px-4 py-2 mb-8 uppercase"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Coming soon · App Store &amp; Google Play</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight mb-8">Grow Your Chair. <span class="italic font-normal text-gradient">Keep 100%.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10">Go2Cut is the premium <strong class="font-semibold text-on-surface">barber booking app</strong> for independent UK barbers. Take barber appointments with <span class="text-primary">0% commission</span>, and fill your empty chairs instantly by reaching every customer within 2 miles of your shop.</p>
+<!-- Mobile app preview (hero) -->
+<div class="lg:hidden flex justify-center my-10">
+<div style="width:230px;max-width:64vw;padding:9px;background:#0c0c0c;border:1px solid rgba(200,169,107,.28);border-radius:32px;box-shadow:0 24px 60px rgba(0,0,0,.55);">
+<img src="hero-2.jpg" alt="Go2Cut customer app home screen — search barbers, upcoming booking, available now nearby" width="640" height="1423" style="display:block;width:100%;height:auto;border-radius:24px;"/>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 mb-10">
+<a class="font-button text-button bg-primary text-on-primary px-10 py-4 rounded-DEFAULT hover:opacity-90 transition-all uppercase text-center" href="#apply">Apply to Join</a>
+<a class="font-button text-button border border-primary text-primary px-10 py-4 rounded-DEFAULT hover:bg-primary/5 transition-all uppercase text-center" href="#how">See How It Works</a>
+</div>
+<!-- Founding offer highlight -->
+<a class="inline-flex items-center gap-3 bg-primary-container/15 border border-primary/30 rounded-DEFAULT px-5 py-3 mb-8 hover:bg-primary-container/25 transition-colors" href="#apply">
+<span class="material-symbols-outlined text-primary">stars</span>
+<span class="font-body-md text-body-md text-on-surface"><span class="text-primary font-semibold">Founding offer:</span> the first 100 shops are featured free for a full month.</span>
+</a>
+<!-- Store badges -->
+<div class="flex flex-wrap items-center gap-4">
+<span class="font-label-caps text-[11px] text-on-surface-variant/60 uppercase tracking-[0.15em]">Launching soon on</span>
+<span class="inline-flex items-center gap-2 border border-outline-variant/30 rounded-DEFAULT px-4 py-2.5"><svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7c1.1 0 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.1 0-2.1-.8-2.1-3.3zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg><span class="font-body-md text-sm text-on-surface">App Store</span></span>
+<span class="inline-flex items-center gap-2 border border-outline-variant/30 rounded-DEFAULT px-4 py-2.5"><svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l.1.1L13 13v-.2L3.7 2.2l-.1.1zM16.5 16.2l-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1 .6 1 1.6 0 2.2l-3.7 2.1-.1-.1zM13.4 12.9L16.6 16.1 5 22.7c-.5.3-1 .3-1.4 0l9.8-9.8zM13.4 11.1L3.6 1.3c.4-.3.9-.3 1.4 0l11.6 6.6-3.2 3.2z"/></svg><span class="font-body-md text-sm text-on-surface">Google Play</span></span>
+</div>
+</div>
+<div class="lg:col-span-5 hidden lg:flex justify-center lg:justify-end items-start gap-4 sm:gap-6 lg:mt-0">
+<div style="width:215px;max-width:42vw;padding:9px;background:#0c0c0c;border:1px solid rgba(200,169,107,.28);border-radius:32px;box-shadow:0 24px 60px rgba(0,0,0,.55);">
+<img src="hero-2.jpg" alt="Go2Cut customer app home screen — search barbers by postcode, upcoming booking, available now nearby" width="640" height="1423" style="display:block;width:100%;height:auto;border-radius:24px;"/>
+</div>
+<div class="mt-12 hidden sm:block" style="width:215px;max-width:42vw;padding:9px;background:#0c0c0c;border:1px solid rgba(200,169,107,.28);border-radius:32px;box-shadow:0 24px 60px rgba(0,0,0,.55);">
+<img src="hero-1.jpg" alt="Go2Cut customer app My Bookings — confirmed barber appointments with date, time and price" width="640" height="1278" style="display:block;width:100%;height:auto;border-radius:24px;"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 0% commission band -->
+<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-8">
+<div class="bg-primary-container text-on-primary-container rounded-lg p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<span class="font-display-lg text-[80px] leading-none font-bold">0%</span>
+<div>
+<h2 class="font-headline-md text-headline-md">Commission. Period.</h2>
+<p class="font-body-md text-body-md opacity-80 max-w-md">Every booking you take through Go2Cut is 100% yours. No booking fees on your service revenue — ever.</p>
+</div>
+</div>
+<a class="font-button text-button bg-on-primary-container/90 text-primary-container px-8 py-4 rounded-DEFAULT hover:opacity-90 transition-all uppercase whitespace-nowrap" href="#apply">Become a Partner</a>
+</div>
+</section>
+<!-- HOW IT WORKS: Instant Campaigns -->
+<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-section-gap" id="how">
+<div class="max-w-2xl mb-16">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">THE GAME CHANGER</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-6">Never let a chair sit <span class="italic text-gradient">empty.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A quiet afternoon costs you money. With Go2Cut Instant Campaigns, you fill last-minute gaps by reaching <span class="text-primary">every Go2Cut customer within 2 miles of your shop</span> &mdash; in seconds, straight to their phone.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<!-- Steps -->
+<div class="space-y-8">
+<div class="flex items-start gap-5">
+<span class="flex-shrink-0 w-12 h-12 rounded-full border border-primary/40 text-primary font-display-lg text-headline-md flex items-center justify-center">1</span>
+<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1">Spot a gap</h3><p class="font-body-md text-body-md text-on-surface-variant">See an empty slot this afternoon? Open the app and tap <span class="text-on-surface">Create a Deal</span>.</p></div>
+</div>
+<div class="flex items-start gap-5">
+<span class="flex-shrink-0 w-12 h-12 rounded-full border border-primary/40 text-primary font-display-lg text-headline-md flex items-center justify-center">2</span>
+<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1">Set your offer</h3><p class="font-body-md text-body-md text-on-surface-variant">Choose the service, the time window, and a special price to tempt nearby clients &mdash; you&rsquo;re in full control.</p></div>
+</div>
+<div class="flex items-start gap-5">
+<span class="flex-shrink-0 w-12 h-12 rounded-full border border-primary/40 text-primary font-display-lg text-headline-md flex items-center justify-center">3</span>
+<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1">We notify everyone within 2 miles</h3><p class="font-body-md text-body-md text-on-surface-variant">Go2Cut instantly sends a push notification to every customer using the app within a 2-mile radius of your shop. No mailing list, no ad spend &mdash; just instant local reach.</p></div>
+</div>
+<div class="flex items-start gap-5">
+<span class="flex-shrink-0 w-12 h-12 rounded-full border border-primary/40 text-primary font-display-lg text-headline-md flex items-center justify-center">4</span>
+<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1">Chair filled, 100% yours</h3><p class="font-body-md text-body-md text-on-surface-variant">A nearby client books in a couple of taps and walks in. You turned dead time into revenue &mdash; with 0% commission.</p></div>
+</div>
+</div>
+<!-- Phone notification mockup -->
+<div class="relative flex justify-center">
+<div class="w-full max-w-sm bg-surface-container-low border border-outline-variant/15 rounded-xl p-6 shadow-2xl">
+<div class="flex items-center justify-between mb-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant/60 uppercase">Now</span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Within 2 miles</span>
+</div>
+<div class="bg-surface-container border border-outline-variant/15 rounded-lg p-4 flex gap-4">
+<div class="w-11 h-11 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined">content_cut</span></div>
+<div>
+<div class="flex items-center justify-between gap-2"><span class="font-body-md text-sm font-semibold text-on-surface">Go2Cut</span><span class="font-body-md text-[11px] text-on-surface-variant/50">now</span></div>
+<p class="font-body-md text-sm text-on-surface-variant mt-1"><span class="text-primary">20% off a fresh cut</span> at The Sharp Fade — free chair at 3:30pm today. Tap to book before it&rsquo;s gone.</p>
+</div>
+</div>
+<div class="mt-5 flex gap-3">
+<div class="flex-1 text-center bg-primary text-on-primary font-button text-button py-3 rounded-DEFAULT uppercase">Book Now</div>
+<div class="text-center border border-outline-variant/20 text-on-surface-variant font-button text-button py-3 px-4 rounded-DEFAULT uppercase">Later</div>
+</div>
+<p class="text-center font-label-caps text-[10px] text-on-surface-variant/40 mt-5 uppercase tracking-[0.15em]">Sample push notification</p>
+</div>
+<div class="absolute -z-10 inset-0 bg-primary/5 blur-3xl rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- For Barbers -->
+<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-section-gap border-t border-outline-variant/10" id="barbers">
+<div class="max-w-2xl mb-16">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">FOR BARBERS</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight">Everything you need to run a <span class="italic text-gradient">thriving chair.</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-5">percent</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">0% Commission</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Keep every penny of your service revenue. We never take a cut of your craft.</p>
+</div>
+<div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-5">campaign</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Instant Campaigns</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Fill quiet slots by alerting every customer within 2 miles in a single tap.</p>
+</div>
+<div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-5">calendar_month</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Smart Calendar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Automated bookings, reminders, and no-show protection that keep your day flowing.</p>
+</div>
+<div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-5">groups</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Client CRM</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Remember preferences and history, and bring regulars back with loyalty perks.</p>
+</div>
+<div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-5">monitoring</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Revenue Dashboard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Track earnings, busy hours, and growth in real time &mdash; know your numbers.</p>
+</div>
+<div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-5">verified</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Verified Profile</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Showcase your portfolio and reviews to attract the clients you deserve.</p>
+</div>
+</div>
+</section>
+<!-- For Customers -->
+<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-section-gap" id="customers">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-4">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">FOR CUSTOMERS</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-6">A ready-made audience, <span class="italic text-gradient">right nearby.</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Customers join Go2Cut to find and book great barbers fast. That growing local audience is exactly who sees your Instant Campaigns &mdash; so every empty slot has someone ready to fill it.</p>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">near_me</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1">Discover Nearby</h4><p class="font-body-md text-body-md text-on-surface-variant">Find top-rated barbers on a map, with portfolios and verified reviews.</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">bolt</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1">Flash Deals</h4><p class="font-body-md text-body-md text-on-surface-variant">Grab your campaigns &mdash; last-minute offers from barbers just around the corner.</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">event_available</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1">Book in Seconds</h4><p class="font-body-md text-body-md text-on-surface-variant">Real-time availability and instant confirmation &mdash; no calls, no waiting.</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">verified</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1">Verified Reviews</h4><p class="font-body-md text-body-md text-on-surface-variant">Real ratings and portfolios &mdash; plus smart reminders before every visit.</p></div></div>
+</div>
+</div>
+</section>
+<!-- App preview: real customer app screenshots -->
+<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-section-gap border-t border-outline-variant/10" id="app-preview">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">INSIDE THE APP</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-5">This is how customers <span class="italic text-gradient">find &amp; book you.</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Every customer within 2 miles sees your shop on the map, your reviews and prices &mdash; and books your chair in a couple of taps. You just show up and cut.</p>
+</div>
+<div class="flex flex-wrap justify-center items-start gap-8 md:gap-14">
+<figure class="flex flex-col items-center" style="margin:0;width:248px;max-width:72vw;">
+<div style="width:248px;max-width:72vw;padding:10px;background:#0c0c0c;border:1px solid rgba(200,169,107,.28);border-radius:34px;box-shadow:0 24px 60px rgba(0,0,0,.55);">
+<img src="app-map.jpg" alt="Go2Cut customer app — discover nearby barbers on a map, Available now 0.1 miles away" loading="lazy" width="720" height="1405" style="display:block;width:100%;height:auto;border-radius:26px;"/>
+</div>
+<figcaption class="font-body-md text-body-md text-on-surface-variant mt-5 text-center">Customers discover you on the map &mdash; <span class="text-on-surface">&ldquo;Available now&rdquo;, 0.1 mi away.</span></figcaption>
+</figure>
+<figure class="flex flex-col items-center" style="margin:0;width:248px;max-width:72vw;">
+<div style="width:248px;max-width:72vw;padding:10px;background:#0c0c0c;border:1px solid rgba(200,169,107,.28);border-radius:34px;box-shadow:0 24px 60px rgba(0,0,0,.55);">
+<img src="app-profile.jpg" alt="Go2Cut customer app — barber shop profile with reviews, prices and Book Appointment button" loading="lazy" width="720" height="1427" style="display:block;width:100%;height:auto;border-radius:26px;"/>
+</div>
+<figcaption class="font-body-md text-body-md text-on-surface-variant mt-5 text-center">Your profile, reviews &amp; prices &mdash; <span class="text-on-surface">booked in a couple of taps.</span></figcaption>
+</figure>
+</div>
+</section>
+<!-- FAQ (matches FAQPage structured data) -->
+<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-section-gap border-t border-outline-variant/10" id="faq">
+<div class="max-w-2xl mb-12">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">FAQ</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight">Barber questions, <span class="italic text-gradient">answered.</span></h2>
+</div>
+<div class="max-w-3xl space-y-1">
+<details class="group border-b border-outline-variant/10" open>
+<summary class="list-none [&amp;::-webkit-details-marker]:hidden flex justify-between items-center gap-4 cursor-pointer py-5">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Is Go2Cut really 0% commission for barbers?</h3>
+<span class="material-symbols-outlined text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl">Yes. Go2Cut charges 0% commission on your bookings, so you keep 100% of your service revenue.</p>
+</details>
+<details class="group border-b border-outline-variant/10">
+<summary class="list-none [&amp;::-webkit-details-marker]:hidden flex justify-between items-center gap-4 cursor-pointer py-5">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">How does Go2Cut help barbers get more clients?</h3>
+<span class="material-symbols-outlined text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl">When you have an empty slot, create an Instant Campaign and Go2Cut sends a push notification to every customer using the app within 2 miles of your shop, filling the chair fast.</p>
+</details>
+<details class="group border-b border-outline-variant/10">
+<summary class="list-none [&amp;::-webkit-details-marker]:hidden flex justify-between items-center gap-4 cursor-pointer py-5">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">How much does the Go2Cut barber app cost?</h3>
+<span class="material-symbols-outlined text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl">There is no booking commission and no setup fee. Join the waitlist to become a founding barber.</p>
+</details>
+<details class="group border-b border-outline-variant/10">
+<summary class="list-none [&amp;::-webkit-details-marker]:hidden flex justify-between items-center gap-4 cursor-pointer py-5">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">When does the Go2Cut app launch?</h3>
+<span class="material-symbols-outlined text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl">Go2Cut is launching soon on the App Store and Google Play. Apply now to be one of the first 100 shops, featured free for a full month at launch.</p>
+</details>
+<details class="group border-b border-outline-variant/10">
+<summary class="list-none [&amp;::-webkit-details-marker]:hidden flex justify-between items-center gap-4 cursor-pointer py-5">
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Where is Go2Cut available?</h3>
+<span class="material-symbols-outlined text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl">Go2Cut is launching across the United Kingdom. Register your shop now to go live in your area from day one.</p>
+</details>
+</div>
+</section>
+<!-- Coming soon stores -->
+<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-8">
+<div class="bg-surface-container-low/70 border border-outline-variant/10 rounded-lg p-10 md:p-14 text-center">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">LAUNCHING SOON</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-4">Coming soon to <span class="italic text-gradient">App Store &amp; Google Play.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-8">The Go2Cut app launches soon on iOS and Android. Apply now to be one of our founding barbers and go live from day one.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<span class="inline-flex items-center gap-2 border border-outline-variant/30 rounded-DEFAULT px-5 py-3"><svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7c1.1 0 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.1 0-2.1-.8-2.1-3.3zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg><span class="text-left"><span class="block font-label-caps text-[9px] text-on-surface-variant/50 uppercase">Coming soon on the</span><span class="block font-body-md text-sm text-on-surface">App Store</span></span></span>
+<span class="inline-flex items-center gap-2 border border-outline-variant/30 rounded-DEFAULT px-5 py-3"><svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l.1.1L13 13v-.2L3.7 2.2l-.1.1zM16.5 16.2l-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1 .6 1 1.6 0 2.2l-3.7 2.1-.1-.1zM13.4 12.9L16.6 16.1 5 22.7c-.5.3-1 .3-1.4 0l9.8-9.8zM13.4 11.1L3.6 1.3c.4-.3.9-.3 1.4 0l11.6 6.6-3.2 3.2z"/></svg><span class="text-left"><span class="block font-label-caps text-[9px] text-on-surface-variant/50 uppercase">Coming soon on</span><span class="block font-body-md text-sm text-on-surface">Google Play</span></span></span>
+</div>
+</div>
+</section>
+<!-- Application form -->
+<section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-section-gap">
+<!-- Launch campaign banner -->
+<div class="mb-12 bg-gradient-to-r from-primary-container/25 via-primary-container/10 to-transparent border border-primary/30 rounded-lg p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+<span class="material-symbols-outlined text-primary text-5xl flex-shrink-0">stars</span>
+<div class="flex-1">
+<span class="font-label-caps text-label-caps text-primary uppercase">Founding Barber Campaign</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1">The first 100 shops get featured free for a full month.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Be one of the first 100 barber shops to register and we&rsquo;ll spotlight you at the top of Go2Cut for <span class="text-primary">one month at launch</span> &mdash; premium placement in front of every nearby customer, completely on us.</p>
+</div>
+<div class="text-center flex-shrink-0 border-l border-primary/20 pl-6">
+<span class="block font-display-lg text-[52px] leading-none text-primary font-bold">100</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant/60 uppercase tracking-[0.15em]">spots only</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter" id="apply">
+<div class="lg:col-span-5">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">JOIN GO2CUT</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-6">Register your <span class="italic text-gradient">shop.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">This form adds your shop directly to the Go2Cut barber system. Once you submit, we register your business and reach out before launch to verify your details and set up your profile, services, and first Instant Campaign &mdash; so you go live to customers from day one.</p>
+<p class="font-body-md text-body-md text-on-surface mb-8">Submit early: the <span class="text-primary">first 100 shops to register</span> are featured at the top of the app, free, for a full month at launch.</p>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Added straight into the Go2Cut barber network</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> 0% commission on your bookings</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Reach every customer within 2 miles</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> First 100 shops featured free for 1 month</li>
+</ul>
+</div>
+<div class="lg:col-span-7">
+<form class="apply-form bg-surface-container-low/70 border border-outline-variant/10 rounded-lg p-8 md:p-10 space-y-6">
+<!-- Form -> submit.php (egeolabs yontemi: CSRF + honeypot + PHP mail -> info@go2cut.co.uk) -->
+<input type="hidden" name="csrf_token" id="csrf_token" value=""/>
+<input type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"/>
+<div>
+<h3 class="font-headline-md text-headline-md mb-1">Your business</h3>
+<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6">Tell us where to find your shop.</p>
+<div class="space-y-5">
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="business">Business name <span class="text-primary">*</span></label>
+<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="business" name="business_name" required type="text" autocomplete="organization"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="addr1">Address line 1 <span class="text-primary">*</span></label>
+<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="addr1" name="address_line_1" placeholder="Number and street" required type="text" autocomplete="address-line1"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="addr2">Address line 2 <span class="text-on-surface-variant/40 normal-case tracking-normal">(optional)</span></label>
+<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="addr2" name="address_line_2" placeholder="Unit / building" type="text" autocomplete="address-line2"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="city">Town / City <span class="text-primary">*</span></label>
+<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="city" name="city" required type="text" autocomplete="address-level2"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="postcode">Postcode <span class="text-primary">*</span></label>
+<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0 uppercase" id="postcode" name="postcode" required type="text" autocomplete="postal-code"/>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="country">Country <span class="text-primary">*</span></label>
+<select class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="country" name="country" required autocomplete="country-name">
+<option value="United Kingdom" selected>United Kingdom</option>
+<option value="Ireland">Ireland</option>
+<option value="Other">Other</option>
+</select>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 pt-6">
+<h3 class="font-headline-md text-headline-md mb-1">Your details</h3>
+<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6">So we can reach you before launch.</p>
+<div class="space-y-5">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="name">Contact name <span class="text-primary">*</span></label>
+<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="name" name="contact_name" required type="text" autocomplete="name"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="phone">Phone <span class="text-primary">*</span></label>
+<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="phone" name="phone" required type="tel" autocomplete="tel"/>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="email">Email <span class="text-primary">*</span></label>
+<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="email" name="email" required type="email" autocomplete="email"/>
+</div>
+</div>
+</div>
+<button class="w-full font-button text-button bg-primary text-on-primary px-10 py-4 rounded-DEFAULT hover:opacity-90 transition-all uppercase" type="submit">Submit Application</button>
+<p class="apply-msg hidden font-body-md text-body-md text-primary text-center"></p>
+<p class="font-body-md text-[13px] text-on-surface-variant/50 text-center">By applying you agree to be contacted about Go2Cut. We&rsquo;ll never share your details.</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-outline-variant/10 bg-surface/60">
+<div class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-14 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start">
+<img alt="Go2Cut barber booking app logo" class="h-16 w-auto mb-3" src="logo.png"/>
+<p class="font-body-md text-body-md text-on-surface-variant/70">Premium barber appointments. 0% commission, 100% yours.</p>
+</div>
+<div class="flex space-x-3">
+<a class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all" aria-label="YouTube" href="https://www.youtube.com/@Go2Cut-l5y" target="_blank" rel="noopener"><svg class="social-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all" aria-label="Instagram" href="https://www.instagram.com/go2cutapp/" target="_blank" rel="noopener"><svg class="social-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.3-8.4a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all" aria-label="TikTok" href="https://www.tiktok.com/@go2cut" target="_blank" rel="noopener"><svg class="social-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3v12.1a2.5 2.5 0 1 1-2.5-2.5c.2 0 .5 0 .7.1V9.6a5.6 5.6 0 1 0 4.8 5.5V8.9a7.3 7.3 0 0 0 4.3 1.4V7.3a4.3 4.3 0 0 1-3.3-1.5z"/></svg></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all" aria-label="Facebook" href="#"><svg class="social-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg></a>
+</div>
+</div>
+<div class="border-t border-outline-variant/5">
+<div class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-6 text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant/50">© 2026 Egeo Labs. All rights reserved.</span>
+<a href="privacy.html" class="font-label-caps text-label-caps text-on-surface-variant/50 hover:text-primary underline ml-3">Privacy &amp; Cookie Policy</a>
+</div>
+</div>
+</footer>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+            var id = this.getAttribute('href').slice(1);
+            var t = id ? document.getElementById(id) : null;
+            if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 90, behavior: 'smooth' }); }
+        });
+    });
+    // Başvuru formu → submit.php (kendi sunucumuz → info@go2cut.co.uk, sayfa-içi onay)
+    var FORM_ENDPOINT = 'submit.php';
+    document.querySelectorAll('.apply-form').forEach(function (form) {
+        var msg = form.querySelector('.apply-msg');
+        var btn = form.querySelector('button[type="submit"]');
+
+        // CSRF token (egeolabs yontemi: client-side crypto, 48 hex)
+        var csrf = form.querySelector('input[name="csrf_token"]');
+        if (csrf && window.crypto && crypto.getRandomValues) {
+            var carr = new Uint8Array(24);
+            crypto.getRandomValues(carr);
+            csrf.value = Array.from(carr, function (b) { return b.toString(16).padStart(2, '0'); }).join('');
+        }
+
+        function setMsg(text, isError) {
+            if (!msg) return;
+            msg.textContent = text;
+            msg.classList.remove('hidden', 'text-primary', 'text-red-400');
+            msg.classList.add(isError ? 'text-red-400' : 'text-primary');
+        }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!form.checkValidity()) { form.reportValidity(); return; }
+
+            if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = 'Sending…'; }
+            if (msg) { msg.classList.add('hidden'); }
+
+            fetch(FORM_ENDPOINT, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
+            .then(function (res) {
+                if (res.ok && res.d && res.d.success) {
+                    setMsg("You're in 🎉 Welcome to Go2Cut — you've locked one of our first 100 founding spots, featured free for a full month at launch. We'll be in touch personally before we go live.", false);
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'generate_lead', { form_name: 'barber_application', currency: 'GBP', value: 1 });
+                        gtag('event', 'conversion', { 'send_to': 'AW-18227285132/YSaFCKjA3MMcElyZufND' });
+                    }
+                    form.reset();
+                    var c = document.getElementById('country'); if (c) c.value = 'United Kingdom';
+                } else {
+                    setMsg((res.d && res.d.message) || 'Something went wrong. Please try again, or email us.', true);
+                }
+            })
+            .catch(function () { setMsg('Network error. Please check your connection and try again.', true); })
+            .finally(function () { if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || 'Submit Application'; } });
+        });
+    });
+</script>
+<!-- Cerez onay banner'i (Consent Mode v2) -->
+<div id="cookie-banner" style="position:fixed;left:0;right:0;bottom:0;z-index:9999;display:none;background:#1a1a1a;border-top:1px solid rgba(200,169,107,.35);box-shadow:0 -10px 34px rgba(0,0,0,.55);">
+  <div style="max-width:1100px;margin:0 auto;padding:18px 22px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between;">
+    <p style="margin:0;color:#cfcabf;font-size:13.5px;line-height:1.55;flex:1 1 340px;font-family:'Hanken Grotesk',system-ui,sans-serif;">
+      We use cookies for analytics and advertising to improve Go2Cut and measure our campaigns. You can accept or reject non-essential cookies.
+      <a href="privacy.html" style="color:#e5c484;text-decoration:underline;">Privacy &amp; Cookie Policy</a>.
+    </p>
+    <div style="display:flex;gap:10px;flex:0 0 auto;">
+      <button id="cookie-reject" type="button" style="cursor:pointer;padding:10px 20px;border:1px solid rgba(200,169,107,.45);background:transparent;color:#cfcabf;font-size:13px;letter-spacing:.04em;border-radius:2px;font-family:'Hanken Grotesk',system-ui,sans-serif;">Reject</button>
+      <button id="cookie-accept" type="button" style="cursor:pointer;padding:10px 20px;border:1px solid #c8a96b;background:#c8a96b;color:#131313;font-weight:700;font-size:13px;letter-spacing:.04em;border-radius:2px;font-family:'Hanken Grotesk',system-ui,sans-serif;">Accept</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'g2c_consent';
+  var banner = document.getElementById('cookie-banner');
+  function grant() {
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted', 'analytics_storage': 'granted',
+        'ad_user_data': 'granted', 'ad_personalization': 'granted'
+      });
+    }
+  }
+  var saved = null; try { saved = localStorage.getItem(KEY); } catch (e) {}
+  if (!saved) { banner.style.display = 'block'; }
+  document.getElementById('cookie-accept').addEventListener('click', function () {
+    try { localStorage.setItem(KEY, 'granted'); } catch (e) {}
+    grant(); banner.style.display = 'none';
+  });
+  document.getElementById('cookie-reject').addEventListener('click', function () {
+    try { localStorage.setItem(KEY, 'denied'); } catch (e) {}
+    banner.style.display = 'none';
+  });
+})();
+</script>
+<!-- ===== In-page Sign in / Register (Store auth, token store ile paylasimli) ===== -->
+<style>
+  #g2c-auth label{display:block;font-size:12.5px;color:#a39e92;margin:12px 0 5px}
+  #g2c-auth input{width:100%;background:#202020;border:1px solid rgba(200,169,107,.18);border-radius:4px;color:#e7e3d8;padding:11px 13px;font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:14px;box-sizing:border-box}
+  .g2c-tab,.g2c-role{flex:1;text-align:center;padding:9px;border:1px solid rgba(200,169,107,.18);border-radius:4px;cursor:pointer;font-size:14px;color:#a39e92}
+  .g2c-tab.on,.g2c-role.on{color:#131313;background:#c8a96b;border-color:#c8a96b;font-weight:700}
+  #g2c-submit{width:100%;margin-top:14px;cursor:pointer;padding:12px;border:1px solid #c8a96b;background:#c8a96b;color:#131313;font-weight:700;font-size:14px;border-radius:4px;font-family:'Hanken Grotesk',system-ui,sans-serif}
+  .g2c-hide{display:none!important}
+</style>
+<div id="g2c-ovl" style="position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:90;display:none"></div>
+<div id="g2c-auth" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:100;background:#1a1a1a;border:1px solid rgba(200,169,107,.18);border-radius:8px;width:400px;max-width:92vw;padding:26px;display:none;font-family:'Hanken Grotesk',system-ui,sans-serif;color:#e7e3d8;max-height:92vh;overflow:auto">
+  <h3 id="g2c-title" style="font-family:'Playfair Display',serif;color:#fff;margin:0 0 4px;font-size:22px">Sign in</h3>
+  <p style="color:#a39e92;font-size:13px;margin:0 0 16px">Sign in to shop the Go2Cut Store — barbers get trade prices, customers get retail.</p>
+  <div style="display:flex;gap:8px;margin-bottom:8px">
+    <div class="g2c-tab on" id="g2c-tl">Sign in</div>
+    <div class="g2c-tab" id="g2c-tr">Register</div>
+  </div>
+  <form id="g2c-form">
+    <div class="g2c-reg g2c-hide"><label>I am a…</label>
+      <div style="display:flex;gap:10px"><div class="g2c-role on" data-role="customer">Customer</div><div class="g2c-role" data-role="barber">Barber</div></div>
+    </div>
+    <div class="g2c-reg g2c-hide"><label>First name</label><input name="first_name" autocomplete="given-name"/></div>
+    <div class="g2c-reg g2c-hide"><label>Last name</label><input name="last_name" autocomplete="family-name"/></div>
+    <div class="g2c-reg g2c-barber g2c-hide"><label>Shop name</label><input name="shop_name" autocomplete="organization"/></div>
+    <div class="g2c-reg g2c-hide"><label>Phone</label><input name="phone" type="tel" autocomplete="tel"/></div>
+    <div><label>Email</label><input name="email" type="email" autocomplete="email" required/></div>
+    <div><label>Password</label><input name="password" type="password" minlength="6" autocomplete="current-password" required/></div>
+    <button type="submit" id="g2c-submit">Sign in</button>
+    <div id="g2c-msg" style="font-size:13px;margin-top:10px;min-height:18px"></div>
+  </form>
+  <p style="text-align:center;margin:14px 0 0"><button id="g2c-close" style="background:none;border:0;color:#a39e92;font-size:13px;cursor:pointer">Close</button></p>
+</div>
+<script>
+(function(){
+  // Lokal önizlemede de canlı API (store ile aynı oturum/token). Deploy'da zaten canlı.
+  var API = 'https://barbertest.egeolabs.co.uk/api';
+  var $=function(s){return document.querySelector(s);};
+  var mode='login', role='customer', user=null, token=null;
+  try{ token=localStorage.getItem('g2c_store_token'); user=JSON.parse(localStorage.getItem('g2c_store_user')||'null'); }catch(e){}
+
+  function openAuth(){ $('#g2c-auth').style.display='block'; $('#g2c-ovl').style.display='block'; }
+  function closeAuth(){ $('#g2c-auth').style.display='none'; $('#g2c-ovl').style.display='none'; $('#g2c-msg').textContent=''; }
+  function barberFields(){ var show=(mode==='register'&&role==='barber'); document.querySelectorAll('#g2c-auth .g2c-barber').forEach(function(e){ e.classList.toggle('g2c-hide', !show); }); }
+  function setMode(m){
+    mode=m;
+    $('#g2c-tl').classList.toggle('on', m==='login'); $('#g2c-tr').classList.toggle('on', m==='register');
+    document.querySelectorAll('#g2c-auth .g2c-reg').forEach(function(e){ e.classList.toggle('g2c-hide', m!=='register'); });
+    barberFields();
+    $('#g2c-title').textContent = m==='login' ? 'Sign in' : 'Create your account';
+    $('#g2c-submit').textContent = m==='login' ? 'Sign in' : 'Register';
+    $('#g2c-msg').textContent='';
+  }
+  function logout(){ user=null; token=null; localStorage.removeItem('g2c_store_token'); localStorage.removeItem('g2c_store_user'); renderHeader(); }
+  function renderHeader(){
+    var el=document.getElementById('g2c-acct'); if(!el) return;
+    if(user){
+      var first=String((user.name||'Account').split(' ')[0]).replace(/[&<>"']/g,function(ch){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch];}); // F5: XSS escape
+      el.innerHTML='<button id="g2c-out" class="font-button text-button border border-primary text-primary px-3 py-2.5 sm:px-6 sm:py-3 rounded-DEFAULT hover:bg-primary/10 transition-all uppercase">'+first+' · Sign out</button>';
+      document.getElementById('g2c-out').onclick=logout;
+    } else {
+      el.innerHTML='<a id="g2c-signin" class="font-button text-button border border-primary text-primary px-3 py-2.5 sm:px-6 sm:py-3 rounded-DEFAULT hover:bg-primary/10 transition-all uppercase cursor-pointer" href="javascript:void(0)"><span class="sm:hidden">Sign in</span><span class="hidden sm:inline">Sign in / Register</span></a>';
+      document.getElementById('g2c-signin').onclick=openAuth;
+    }
+  }
+  $('#g2c-tl').onclick=function(){setMode('login');};
+  $('#g2c-tr').onclick=function(){setMode('register');};
+  $('#g2c-close').onclick=closeAuth;
+  $('#g2c-ovl').onclick=closeAuth;
+  document.querySelectorAll('#g2c-auth .g2c-role').forEach(function(t){
+    t.onclick=function(){ document.querySelectorAll('#g2c-auth .g2c-role').forEach(function(x){x.classList.remove('on');}); t.classList.add('on'); role=t.getAttribute('data-role'); barberFields(); };
+  });
+  $('#g2c-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f=e.target, msg=$('#g2c-msg'); msg.style.color='#a39e92'; msg.textContent='Please wait…';
+    var btn=$('#g2c-submit'); btn.disabled=true;
+    var path, body;
+    if(mode==='login'){ path='/auth/login'; body={email:f.email.value.trim(), password:f.password.value}; }
+    else { path='/auth/register'; body={first_name:f.first_name.value.trim(),last_name:f.last_name.value.trim(),email:f.email.value.trim(),password:f.password.value,phone:f.phone.value.trim(),role:role}; if(role==='barber') body.shop_name=f.shop_name.value.trim(); }
+    fetch(API+path,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)})
+      .then(function(r){return r.json().catch(function(){return {};}).then(function(d){return {ok:r.ok,d:d};});})
+      .then(function(res){
+        if(res.ok && res.d && res.d.token){
+          token=res.d.token; user=res.d.user||null;
+          localStorage.setItem('g2c_store_token',token); localStorage.setItem('g2c_store_user',JSON.stringify(user));
+          msg.style.color='#7faf7f'; msg.textContent='Welcome! You can now shop the Store.';
+          renderHeader(); setTimeout(closeAuth, 800);
+        } else {
+          msg.style.color='#e07a5f';
+          msg.textContent=(res.d && (res.d.message || (res.d.errors && Object.values(res.d.errors)[0][0]))) || 'Could not sign in. Check your details.';
+        }
+      })
+      .catch(function(){ msg.style.color='#e07a5f'; msg.textContent='Network error. Please try again.'; })
+      .finally(function(){ btn.disabled=false; });
+  });
+  renderHeader(); setMode('login');
+  if(!user && /[?&]auth=1/.test(location.search)) openAuth();
+})();
+</script>
+</body></html>

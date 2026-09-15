@@ -1,0 +1,10 @@
+# Sunucuya-özel secret (BARBER_FORM_SECRET + SMTP) → git-deploy canlı submit.php'yi ezmesin
+submit.php
+# Canlıdan bilerek kaldırıldı (diagnostik) → geri gelmesin
+ver.php
+# İç doküman
+CANLI_DEPLOY_LISTESI.md
+# Uzantısız stray kopyalar
+hero-1
+hero-2
+.DS_Store

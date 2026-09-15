@@ -1,0 +1,23 @@
+# http -> https + www -> non-www (canonical: https://go2cut.co.uk)
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://go2cut.co.uk%{REQUEST_URI} [R=301,L]
+
+# ===== Guvenlik header'lari (F4) =====
+# .htaccess zaten her trafigi HTTPS'e zorluyor; HSTS sadece HTTPS'te tarayicilarca dikkate alinir.
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# Hassas dosyalara erisimi engelle (defense-in-depth — F8/genel)
+<FilesMatch "(\.(bak|old|save|swp|dist|sql|sh|md|log|ini)|~)$">
+    Require all denied
+</FilesMatch>
+
+# CSP: Tailwind Play CDN + inline script'ler 'unsafe-inline'/'unsafe-eval' gerektirir →
+# anlamli CSP icin once Tailwind build + script'leri disa al (deploy listesinde F4-ileri).
