@@ -728,5 +728,31 @@ renderAccount(); renderCart(); loadProducts(); loadSettings();
 // index.html "Sign in / Register" → store.html?auth=1 ile gelince giris modalini ac
 if (!state.user && /[?&]auth=1/.test(location.search)) openAuth();
 </script>
+<!-- UK-only store bloklama -->
+<div id="geo-block" style="position:fixed;inset:0;z-index:9999;background:#131313;color:#e7e3d8;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;font-family:'Hanken Grotesk',system-ui,sans-serif">
+  <div style="max-width:440px">
+    <div style="font-size:44px;margin-bottom:14px">🇬🇧</div>
+    <h2 style="font-family:'Playfair Display',serif;color:#fff;font-size:24px;margin:0 0 10px">Store available in the UK</h2>
+    <p style="color:#a39e92;line-height:1.55;font-size:15px">Our barber &amp; grooming store currently ships within the United Kingdom only. The Go2Cut app is coming across Europe — <a href="index.html" style="color:#e5c484">learn more</a>.</p>
+  </div>
+</div>
+<script>
+// UK-only store: dışarıdan gelene overlay ile kapat (gerçek satış-kilidi backend'de olmalı)
+(function(){
+  function gate(cc){
+    if (cc && cc !== 'GB'){
+      var b = document.getElementById('geo-block');
+      if (b){ b.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    }
+  }
+  var cc = null; try { cc = sessionStorage.getItem('g2c_country'); } catch(e){}
+  if (cc && cc !== 'GB') gate(cc);              // cache'li non-UK → hemen kapat
+  fetch('/geo.php').then(function(r){ return r.json(); }).then(function(d){
+    var c = (d && d.country) || '';
+    try { sessionStorage.setItem('g2c_country', c); } catch(e){}
+    gate(c);
+  }).catch(function(){});
+})();
+</script>
 </body>
 </html>

@@ -161,7 +161,7 @@
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#faq">FAQ</a>
 </div>
 <div class="flex items-center gap-2 sm:gap-3">
-<a class="inline-flex items-center gap-1.5 font-button text-button border border-primary text-primary bg-primary/10 px-3 py-2.5 sm:px-5 sm:py-3 rounded-DEFAULT hover:bg-primary hover:text-on-primary transition-all uppercase" href="store.html"><span aria-hidden="true">🛍️</span> Store</a>
+<a id="store-tab" class="inline-flex items-center gap-1.5 font-button text-button border border-primary text-primary bg-primary/10 px-3 py-2.5 sm:px-5 sm:py-3 rounded-DEFAULT hover:bg-primary hover:text-on-primary transition-all uppercase" href="store.html"><span aria-hidden="true">🛍️</span> Store</a>
 <span id="g2c-acct"><a id="g2c-signin" class="font-button text-button border border-primary text-primary px-3 py-2.5 sm:px-6 sm:py-3 rounded-DEFAULT hover:bg-primary/10 transition-all uppercase cursor-pointer" href="javascript:void(0)"><span class="sm:hidden">Sign in</span><span class="hidden sm:inline">Sign in / Register</span></a></span>
 </div>
 </nav>
@@ -713,6 +713,26 @@
   });
   renderHeader(); setMode('login');
   if(!user && /[?&]auth=1/.test(location.search)) openAuth();
+})();
+</script>
+<script>
+// ===== Store gate — Store yalnız UK'de görünür; app landing (Avrupa) herkeste kalır =====
+(function(){
+  function applyGate(cc){
+    var uk = (!cc || cc === 'GB'); // bilinmiyorsa GÖSTER (fail-open; gerçek satış-kilidi backend'de)
+    ['store-tab','g2c-acct'].forEach(function(id){
+      var el = document.getElementById(id);
+      if (el) el.style.display = uk ? '' : 'none';
+    });
+  }
+  var cc = null;
+  try { cc = sessionStorage.getItem('g2c_country'); } catch(e){}
+  if (cc !== null) applyGate(cc);              // cache'liyse anında uygula (flicker'ı azaltır)
+  fetch('/geo.php').then(function(r){ return r.json(); }).then(function(d){
+    var c = (d && d.country) || '';
+    try { sessionStorage.setItem('g2c_country', c); } catch(e){}
+    applyGate(c);
+  }).catch(function(){ applyGate(''); });        // geo başarısız → göster (UK varsayılanı)
 })();
 </script>
 </body></html>

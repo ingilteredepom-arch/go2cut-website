@@ -8,3 +8,4 @@ deployment:
     - /bin/cp -f index.html "$DP/index.html"
     - /bin/cp -f store.html "$DP/store.html"
     - /bin/cp -f .htaccess "$DP/.htaccess"
+    - /bin/cp -f geo.php "$DP/geo.php"
