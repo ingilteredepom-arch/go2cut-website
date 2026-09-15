@@ -153,16 +153,16 @@
 <!-- Header -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/10">
 <nav class="flex justify-between items-center w-full px-6 md:px-margin-desktop py-4 max-w-container-max mx-auto">
-<a class="flex items-center gap-3" href="#top"><img alt="Go2Cut barber booking app logo" class="h-12 md:h-14 w-auto" src="logo.png"/><span class="hidden sm:inline font-label-caps text-[10px] text-primary uppercase tracking-[0.2em] border-l border-outline-variant/20 pl-3">100% Free Barber App</span></a>
+<a class="flex items-center gap-3" href="#top"><img alt="Go2Cut barber booking app logo" class="h-12 md:h-14 w-auto" src="logo.png"/><span class="hidden sm:inline font-label-caps text-[10px] text-primary uppercase tracking-[0.2em] border-l border-outline-variant/20 pl-3" data-i18n="badge_free">100% Free Barber App</span></a>
 <div class="hidden md:flex items-center gap-8">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#how">How It Works</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#barbers">For Barbers</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#customers">For Customers</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#faq">FAQ</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#how" data-i18n="nav_how">How It Works</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#barbers" data-i18n="nav_barbers">For Barbers</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#customers" data-i18n="nav_customers">For Customers</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#faq" data-i18n="nav_faq">FAQ</a>
 </div>
 <div class="flex items-center gap-2 sm:gap-3">
-<a id="store-tab" class="inline-flex items-center gap-1.5 font-button text-button border border-primary text-primary bg-primary/10 px-3 py-2.5 sm:px-5 sm:py-3 rounded-DEFAULT hover:bg-primary hover:text-on-primary transition-all uppercase" href="store.html"><span aria-hidden="true">🛍️</span> Store</a>
-<span id="g2c-acct"><a id="g2c-signin" class="font-button text-button border border-primary text-primary px-3 py-2.5 sm:px-6 sm:py-3 rounded-DEFAULT hover:bg-primary/10 transition-all uppercase cursor-pointer" href="javascript:void(0)"><span class="sm:hidden">Sign in</span><span class="hidden sm:inline">Sign in / Register</span></a></span>
+<a id="store-tab" data-i18n-html="btn_store" class="inline-flex items-center gap-1.5 font-button text-button border border-primary text-primary bg-primary/10 px-3 py-2.5 sm:px-5 sm:py-3 rounded-DEFAULT hover:bg-primary hover:text-on-primary transition-all uppercase" href="store.html"><span aria-hidden="true">🛍️</span> Store</a>
+<div id="g2c-lang" style="position:relative"><button id="g2c-lang-btn" type="button" aria-haspopup="true" class="inline-flex items-center gap-1.5 font-button text-button border border-outline-variant/30 text-on-surface-variant px-3 py-2.5 sm:px-4 sm:py-3 rounded-DEFAULT hover:text-primary hover:border-primary transition-all"><span aria-hidden="true">🌐</span><span id="g2c-lang-cur" class="hidden sm:inline">English</span></button><div id="g2c-lang-menu" hidden style="position:absolute;right:0;top:calc(100% + 6px);min-width:150px;background:#1a1a1a;border:1px solid rgba(200,169,107,.25);border-radius:6px;box-shadow:0 12px 34px rgba(0,0,0,.5);padding:6px;z-index:60"><button type="button" data-lang="en" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">English</button><button type="button" data-lang="tr" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Türkçe</button><button type="button" data-lang="da" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Dansk</button><button type="button" data-lang="fr" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Français</button><button type="button" data-lang="de" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Deutsch</button><button type="button" data-lang="it" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Italiano</button><button type="button" data-lang="es" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Español</button><button type="button" data-lang="no" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Norsk</button></div></div><span id="g2c-acct"><a id="g2c-signin" class="font-button text-button border border-primary text-primary px-3 py-2.5 sm:px-6 sm:py-3 rounded-DEFAULT hover:bg-primary/10 transition-all uppercase cursor-pointer" href="javascript:void(0)"><span class="sm:hidden">Sign in</span><span class="hidden sm:inline">Sign in / Register</span></a></span>
 </div>
 </nav>
 </header>
@@ -171,9 +171,9 @@
 <section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-16 md:py-24">
 <div class="grid lg:grid-cols-12 gap-gutter lg:gap-12 items-center">
 <div class="lg:col-span-7">
-<span class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary border border-primary/30 rounded-full px-4 py-2 mb-8 uppercase"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Coming soon · App Store &amp; Google Play</span>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight mb-8">Grow Your Chair. <span class="italic font-normal text-gradient">Keep 100%.</span></h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10">Go2Cut is the premium <strong class="font-semibold text-on-surface">barber booking app</strong> for independent UK barbers. Take barber appointments with <span class="text-primary">0% commission</span>, and fill your empty chairs instantly by reaching every customer within 2 miles of your shop.</p>
+<span class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary border border-primary/30 rounded-full px-4 py-2 mb-8 uppercase" data-i18n-html="hero_badge"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Coming soon · App Store &amp; Google Play</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight mb-8" data-i18n-html="hero_h1">Grow Your Chair. <span class="italic font-normal text-gradient">Keep 100%.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10" data-i18n-html="hero_p">Go2Cut is the premium <strong class="font-semibold text-on-surface">barber booking app</strong> for independent UK barbers. Take barber appointments with <span class="text-primary">0% commission</span>, and fill your empty chairs instantly by reaching every customer within 2 miles of your shop.</p>
 <!-- Mobile app preview (hero) -->
 <div class="lg:hidden flex justify-center my-10">
 <div style="width:230px;max-width:64vw;padding:9px;background:#0c0c0c;border:1px solid rgba(200,169,107,.28);border-radius:32px;box-shadow:0 24px 60px rgba(0,0,0,.55);">
@@ -181,17 +181,17 @@
 </div>
 </div>
 <div class="flex flex-col sm:flex-row gap-4 mb-10">
-<a class="font-button text-button bg-primary text-on-primary px-10 py-4 rounded-DEFAULT hover:opacity-90 transition-all uppercase text-center" href="#apply">Apply to Join</a>
-<a class="font-button text-button border border-primary text-primary px-10 py-4 rounded-DEFAULT hover:bg-primary/5 transition-all uppercase text-center" href="#how">See How It Works</a>
+<a class="font-button text-button bg-primary text-on-primary px-10 py-4 rounded-DEFAULT hover:opacity-90 transition-all uppercase text-center" href="#apply" data-i18n="hero_cta1">Apply to Join</a>
+<a class="font-button text-button border border-primary text-primary px-10 py-4 rounded-DEFAULT hover:bg-primary/5 transition-all uppercase text-center" href="#how" data-i18n="hero_cta2">See How It Works</a>
 </div>
 <!-- Founding offer highlight -->
 <a class="inline-flex items-center gap-3 bg-primary-container/15 border border-primary/30 rounded-DEFAULT px-5 py-3 mb-8 hover:bg-primary-container/25 transition-colors" href="#apply">
 <span class="material-symbols-outlined text-primary">stars</span>
-<span class="font-body-md text-body-md text-on-surface"><span class="text-primary font-semibold">Founding offer:</span> the first 100 shops are featured free for a full month.</span>
+<span class="font-body-md text-body-md text-on-surface" data-i18n-html="hero_founding"><span class="text-primary font-semibold">Founding offer:</span> the first 100 shops are featured free for a full month.</span>
 </a>
 <!-- Store badges -->
 <div class="flex flex-wrap items-center gap-4">
-<span class="font-label-caps text-[11px] text-on-surface-variant/60 uppercase tracking-[0.15em]">Launching soon on</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant/60 uppercase tracking-[0.15em]" data-i18n="hero_launch_on">Launching soon on</span>
 <span class="inline-flex items-center gap-2 border border-outline-variant/30 rounded-DEFAULT px-4 py-2.5"><svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7c1.1 0 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.1 0-2.1-.8-2.1-3.3zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg><span class="font-body-md text-sm text-on-surface">App Store</span></span>
 <span class="inline-flex items-center gap-2 border border-outline-variant/30 rounded-DEFAULT px-4 py-2.5"><svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l.1.1L13 13v-.2L3.7 2.2l-.1.1zM16.5 16.2l-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1 .6 1 1.6 0 2.2l-3.7 2.1-.1-.1zM13.4 12.9L16.6 16.1 5 22.7c-.5.3-1 .3-1.4 0l9.8-9.8zM13.4 11.1L3.6 1.3c.4-.3.9-.3 1.4 0l11.6 6.6-3.2 3.2z"/></svg><span class="font-body-md text-sm text-on-surface">Google Play</span></span>
 </div>
@@ -212,59 +212,59 @@
 <div class="flex items-center gap-6">
 <span class="font-display-lg text-[80px] leading-none font-bold">0%</span>
 <div>
-<h2 class="font-headline-md text-headline-md">Commission. Period.</h2>
-<p class="font-body-md text-body-md opacity-80 max-w-md">Every booking you take through Go2Cut is 100% yours. No booking fees on your service revenue — ever.</p>
+<h2 class="font-headline-md text-headline-md" data-i18n="band_h2">Commission. Period.</h2>
+<p class="font-body-md text-body-md opacity-80 max-w-md" data-i18n="band_p">Every booking you take through Go2Cut is 100% yours. No booking fees on your service revenue — ever.</p>
 </div>
 </div>
-<a class="font-button text-button bg-on-primary-container/90 text-primary-container px-8 py-4 rounded-DEFAULT hover:opacity-90 transition-all uppercase whitespace-nowrap" href="#apply">Become a Partner</a>
+<a class="font-button text-button bg-on-primary-container/90 text-primary-container px-8 py-4 rounded-DEFAULT hover:opacity-90 transition-all uppercase whitespace-nowrap" href="#apply" data-i18n="band_cta">Become a Partner</a>
 </div>
 </section>
 <!-- HOW IT WORKS: Instant Campaigns -->
 <section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-section-gap" id="how">
 <div class="max-w-2xl mb-16">
-<span class="font-label-caps text-label-caps text-primary mb-4 block">THE GAME CHANGER</span>
-<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-6">Never let a chair sit <span class="italic text-gradient">empty.</span></h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">A quiet afternoon costs you money. With Go2Cut Instant Campaigns, you fill last-minute gaps by reaching <span class="text-primary">every Go2Cut customer within 2 miles of your shop</span> &mdash; in seconds, straight to their phone.</p>
+<span class="font-label-caps text-label-caps text-primary mb-4 block" data-i18n="how_kicker">THE GAME CHANGER</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-6" data-i18n-html="how_h2">Never let a chair sit <span class="italic text-gradient">empty.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant" data-i18n-html="how_p">A quiet afternoon costs you money. With Go2Cut Instant Campaigns, you fill last-minute gaps by reaching <span class="text-primary">every Go2Cut customer within 2 miles of your shop</span> &mdash; in seconds, straight to their phone.</p>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
 <!-- Steps -->
 <div class="space-y-8">
 <div class="flex items-start gap-5">
 <span class="flex-shrink-0 w-12 h-12 rounded-full border border-primary/40 text-primary font-display-lg text-headline-md flex items-center justify-center">1</span>
-<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1">Spot a gap</h3><p class="font-body-md text-body-md text-on-surface-variant">See an empty slot this afternoon? Open the app and tap <span class="text-on-surface">Create a Deal</span>.</p></div>
+<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1" data-i18n="how_s1_h">Spot a gap</h3><p class="font-body-md text-body-md text-on-surface-variant" data-i18n-html="how_s1_p">See an empty slot this afternoon? Open the app and tap <span class="text-on-surface">Create a Deal</span>.</p></div>
 </div>
 <div class="flex items-start gap-5">
 <span class="flex-shrink-0 w-12 h-12 rounded-full border border-primary/40 text-primary font-display-lg text-headline-md flex items-center justify-center">2</span>
-<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1">Set your offer</h3><p class="font-body-md text-body-md text-on-surface-variant">Choose the service, the time window, and a special price to tempt nearby clients &mdash; you&rsquo;re in full control.</p></div>
+<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1" data-i18n="how_s2_h">Set your offer</h3><p class="font-body-md text-body-md text-on-surface-variant" data-i18n="how_s2_p">Choose the service, the time window, and a special price to tempt nearby clients &mdash; you&rsquo;re in full control.</p></div>
 </div>
 <div class="flex items-start gap-5">
 <span class="flex-shrink-0 w-12 h-12 rounded-full border border-primary/40 text-primary font-display-lg text-headline-md flex items-center justify-center">3</span>
-<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1">We notify everyone within 2 miles</h3><p class="font-body-md text-body-md text-on-surface-variant">Go2Cut instantly sends a push notification to every customer using the app within a 2-mile radius of your shop. No mailing list, no ad spend &mdash; just instant local reach.</p></div>
+<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1" data-i18n="how_s3_h">We notify everyone within 2 miles</h3><p class="font-body-md text-body-md text-on-surface-variant" data-i18n="how_s3_p">Go2Cut instantly sends a push notification to every customer using the app within a 2-mile radius of your shop. No mailing list, no ad spend &mdash; just instant local reach.</p></div>
 </div>
 <div class="flex items-start gap-5">
 <span class="flex-shrink-0 w-12 h-12 rounded-full border border-primary/40 text-primary font-display-lg text-headline-md flex items-center justify-center">4</span>
-<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1">Chair filled, 100% yours</h3><p class="font-body-md text-body-md text-on-surface-variant">A nearby client books in a couple of taps and walks in. You turned dead time into revenue &mdash; with 0% commission.</p></div>
+<div><h3 class="font-headline-md text-body-lg text-on-surface mb-1" data-i18n="how_s4_h">Chair filled, 100% yours</h3><p class="font-body-md text-body-md text-on-surface-variant" data-i18n="how_s4_p">A nearby client books in a couple of taps and walks in. You turned dead time into revenue &mdash; with 0% commission.</p></div>
 </div>
 </div>
 <!-- Phone notification mockup -->
 <div class="relative flex justify-center">
 <div class="w-full max-w-sm bg-surface-container-low border border-outline-variant/15 rounded-xl p-6 shadow-2xl">
 <div class="flex items-center justify-between mb-6">
-<span class="font-label-caps text-label-caps text-on-surface-variant/60 uppercase">Now</span>
-<span class="font-label-caps text-label-caps text-primary uppercase">Within 2 miles</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant/60 uppercase" data-i18n="push_now">Now</span>
+<span class="font-label-caps text-label-caps text-primary uppercase" data-i18n="push_within">Within 2 miles</span>
 </div>
 <div class="bg-surface-container border border-outline-variant/15 rounded-lg p-4 flex gap-4">
 <div class="w-11 h-11 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined">content_cut</span></div>
 <div>
 <div class="flex items-center justify-between gap-2"><span class="font-body-md text-sm font-semibold text-on-surface">Go2Cut</span><span class="font-body-md text-[11px] text-on-surface-variant/50">now</span></div>
-<p class="font-body-md text-sm text-on-surface-variant mt-1"><span class="text-primary">20% off a fresh cut</span> at The Sharp Fade — free chair at 3:30pm today. Tap to book before it&rsquo;s gone.</p>
+<p class="font-body-md text-sm text-on-surface-variant mt-1" data-i18n-html="push_body"><span class="text-primary">20% off a fresh cut</span> at The Sharp Fade — free chair at 3:30pm today. Tap to book before it&rsquo;s gone.</p>
 </div>
 </div>
 <div class="mt-5 flex gap-3">
-<div class="flex-1 text-center bg-primary text-on-primary font-button text-button py-3 rounded-DEFAULT uppercase">Book Now</div>
-<div class="text-center border border-outline-variant/20 text-on-surface-variant font-button text-button py-3 px-4 rounded-DEFAULT uppercase">Later</div>
+<div class="flex-1 text-center bg-primary text-on-primary font-button text-button py-3 rounded-DEFAULT uppercase" data-i18n="push_book">Book Now</div>
+<div class="text-center border border-outline-variant/20 text-on-surface-variant font-button text-button py-3 px-4 rounded-DEFAULT uppercase" data-i18n="push_later">Later</div>
 </div>
-<p class="text-center font-label-caps text-[10px] text-on-surface-variant/40 mt-5 uppercase tracking-[0.15em]">Sample push notification</p>
+<p class="text-center font-label-caps text-[10px] text-on-surface-variant/40 mt-5 uppercase tracking-[0.15em]" data-i18n="push_sample">Sample push notification</p>
 </div>
 <div class="absolute -z-10 inset-0 bg-primary/5 blur-3xl rounded-full"></div>
 </div>
@@ -273,39 +273,39 @@
 <!-- For Barbers -->
 <section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-section-gap border-t border-outline-variant/10" id="barbers">
 <div class="max-w-2xl mb-16">
-<span class="font-label-caps text-label-caps text-primary mb-4 block">FOR BARBERS</span>
-<h2 class="font-display-lg text-display-lg-mobile leading-tight">Everything you need to run a <span class="italic text-gradient">thriving chair.</span></h2>
+<span class="font-label-caps text-label-caps text-primary mb-4 block" data-i18n="barbers_kicker">FOR BARBERS</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight" data-i18n-html="barbers_h2">Everything you need to run a <span class="italic text-gradient">thriving chair.</span></h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
 <span class="material-symbols-outlined text-primary text-4xl mb-5">percent</span>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">0% Commission</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Keep every penny of your service revenue. We never take a cut of your craft.</p>
+<h3 class="font-headline-md text-headline-md text-primary mb-3" data-i18n="feat1_h">0% Commission</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="feat1_p">Keep every penny of your service revenue. We never take a cut of your craft.</p>
 </div>
 <div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
 <span class="material-symbols-outlined text-primary text-4xl mb-5">campaign</span>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">Instant Campaigns</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Fill quiet slots by alerting every customer within 2 miles in a single tap.</p>
+<h3 class="font-headline-md text-headline-md text-primary mb-3" data-i18n="feat2_h">Instant Campaigns</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="feat2_p">Fill quiet slots by alerting every customer within 2 miles in a single tap.</p>
 </div>
 <div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
 <span class="material-symbols-outlined text-primary text-4xl mb-5">calendar_month</span>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">Smart Calendar</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Automated bookings, reminders, and no-show protection that keep your day flowing.</p>
+<h3 class="font-headline-md text-headline-md text-primary mb-3" data-i18n="feat3_h">Smart Calendar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="feat3_p">Automated bookings, reminders, and no-show protection that keep your day flowing.</p>
 </div>
 <div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
 <span class="material-symbols-outlined text-primary text-4xl mb-5">groups</span>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">Client CRM</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Remember preferences and history, and bring regulars back with loyalty perks.</p>
+<h3 class="font-headline-md text-headline-md text-primary mb-3" data-i18n="feat4_h">Client CRM</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="feat4_p">Remember preferences and history, and bring regulars back with loyalty perks.</p>
 </div>
 <div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
 <span class="material-symbols-outlined text-primary text-4xl mb-5">monitoring</span>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">Revenue Dashboard</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Track earnings, busy hours, and growth in real time &mdash; know your numbers.</p>
+<h3 class="font-headline-md text-headline-md text-primary mb-3" data-i18n="feat5_h">Revenue Dashboard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="feat5_p">Track earnings, busy hours, and growth in real time &mdash; know your numbers.</p>
 </div>
 <div class="bg-surface-container-low/70 border border-outline-variant/10 p-8 rounded-lg hover:border-primary/40 transition-colors">
 <span class="material-symbols-outlined text-primary text-4xl mb-5">verified</span>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">Verified Profile</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Showcase your portfolio and reviews to attract the clients you deserve.</p>
+<h3 class="font-headline-md text-headline-md text-primary mb-3" data-i18n="feat6_h">Verified Profile</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="feat6_p">Showcase your portfolio and reviews to attract the clients you deserve.</p>
 </div>
 </div>
 </section>
@@ -313,93 +313,93 @@
 <section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-section-gap" id="customers">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
 <div class="lg:col-span-4">
-<span class="font-label-caps text-label-caps text-primary mb-4 block">FOR CUSTOMERS</span>
-<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-6">A ready-made audience, <span class="italic text-gradient">right nearby.</span></h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Customers join Go2Cut to find and book great barbers fast. That growing local audience is exactly who sees your Instant Campaigns &mdash; so every empty slot has someone ready to fill it.</p>
+<span class="font-label-caps text-label-caps text-primary mb-4 block" data-i18n="cust_kicker">FOR CUSTOMERS</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-6" data-i18n-html="cust_h2">A ready-made audience, <span class="italic text-gradient">right nearby.</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="cust_p">Customers join Go2Cut to find and book great barbers fast. That growing local audience is exactly who sees your Instant Campaigns &mdash; so every empty slot has someone ready to fill it.</p>
 </div>
 <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-gutter">
-<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">near_me</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1">Discover Nearby</h4><p class="font-body-md text-body-md text-on-surface-variant">Find top-rated barbers on a map, with portfolios and verified reviews.</p></div></div>
-<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">bolt</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1">Flash Deals</h4><p class="font-body-md text-body-md text-on-surface-variant">Grab your campaigns &mdash; last-minute offers from barbers just around the corner.</p></div></div>
-<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">event_available</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1">Book in Seconds</h4><p class="font-body-md text-body-md text-on-surface-variant">Real-time availability and instant confirmation &mdash; no calls, no waiting.</p></div></div>
-<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">verified</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1">Verified Reviews</h4><p class="font-body-md text-body-md text-on-surface-variant">Real ratings and portfolios &mdash; plus smart reminders before every visit.</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">near_me</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1" data-i18n="cust1_h">Discover Nearby</h4><p class="font-body-md text-body-md text-on-surface-variant" data-i18n="cust1_p">Find top-rated barbers on a map, with portfolios and verified reviews.</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">bolt</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1" data-i18n="cust2_h">Flash Deals</h4><p class="font-body-md text-body-md text-on-surface-variant" data-i18n="cust2_p">Grab your campaigns &mdash; last-minute offers from barbers just around the corner.</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">event_available</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1" data-i18n="cust3_h">Book in Seconds</h4><p class="font-body-md text-body-md text-on-surface-variant" data-i18n="cust3_p">Real-time availability and instant confirmation &mdash; no calls, no waiting.</p></div></div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">verified</span><div><h4 class="font-headline-md text-body-lg text-on-surface mb-1" data-i18n="cust4_h">Verified Reviews</h4><p class="font-body-md text-body-md text-on-surface-variant" data-i18n="cust4_p">Real ratings and portfolios &mdash; plus smart reminders before every visit.</p></div></div>
 </div>
 </div>
 </section>
 <!-- App preview: real customer app screenshots -->
 <section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-section-gap border-t border-outline-variant/10" id="app-preview">
 <div class="text-center max-w-2xl mx-auto mb-12">
-<span class="font-label-caps text-label-caps text-primary mb-4 block">INSIDE THE APP</span>
-<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-5">This is how customers <span class="italic text-gradient">find &amp; book you.</span></h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Every customer within 2 miles sees your shop on the map, your reviews and prices &mdash; and books your chair in a couple of taps. You just show up and cut.</p>
+<span class="font-label-caps text-label-caps text-primary mb-4 block" data-i18n="inside_kicker">INSIDE THE APP</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-5" data-i18n-html="inside_h2">This is how customers <span class="italic text-gradient">find &amp; book you.</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="inside_p">Every customer within 2 miles sees your shop on the map, your reviews and prices &mdash; and books your chair in a couple of taps. You just show up and cut.</p>
 </div>
 <div class="flex flex-wrap justify-center items-start gap-8 md:gap-14">
 <figure class="flex flex-col items-center" style="margin:0;width:248px;max-width:72vw;">
 <div style="width:248px;max-width:72vw;padding:10px;background:#0c0c0c;border:1px solid rgba(200,169,107,.28);border-radius:34px;box-shadow:0 24px 60px rgba(0,0,0,.55);">
 <img src="app-map.jpg" alt="Go2Cut customer app — discover nearby barbers on a map, Available now 0.1 miles away" loading="lazy" width="720" height="1405" style="display:block;width:100%;height:auto;border-radius:26px;"/>
 </div>
-<figcaption class="font-body-md text-body-md text-on-surface-variant mt-5 text-center">Customers discover you on the map &mdash; <span class="text-on-surface">&ldquo;Available now&rdquo;, 0.1 mi away.</span></figcaption>
+<figcaption class="font-body-md text-body-md text-on-surface-variant mt-5 text-center" data-i18n-html="inside_cap1">Customers discover you on the map &mdash; <span class="text-on-surface">&ldquo;Available now&rdquo;, 0.1 mi away.</span></figcaption>
 </figure>
 <figure class="flex flex-col items-center" style="margin:0;width:248px;max-width:72vw;">
 <div style="width:248px;max-width:72vw;padding:10px;background:#0c0c0c;border:1px solid rgba(200,169,107,.28);border-radius:34px;box-shadow:0 24px 60px rgba(0,0,0,.55);">
 <img src="app-profile.jpg" alt="Go2Cut customer app — barber shop profile with reviews, prices and Book Appointment button" loading="lazy" width="720" height="1427" style="display:block;width:100%;height:auto;border-radius:26px;"/>
 </div>
-<figcaption class="font-body-md text-body-md text-on-surface-variant mt-5 text-center">Your profile, reviews &amp; prices &mdash; <span class="text-on-surface">booked in a couple of taps.</span></figcaption>
+<figcaption class="font-body-md text-body-md text-on-surface-variant mt-5 text-center" data-i18n-html="inside_cap2">Your profile, reviews &amp; prices &mdash; <span class="text-on-surface">booked in a couple of taps.</span></figcaption>
 </figure>
 </div>
 </section>
 <!-- FAQ (matches FAQPage structured data) -->
 <section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-section-gap border-t border-outline-variant/10" id="faq">
 <div class="max-w-2xl mb-12">
-<span class="font-label-caps text-label-caps text-primary mb-4 block">FAQ</span>
-<h2 class="font-display-lg text-display-lg-mobile leading-tight">Barber questions, <span class="italic text-gradient">answered.</span></h2>
+<span class="font-label-caps text-label-caps text-primary mb-4 block" data-i18n="faq_kicker">FAQ</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight" data-i18n-html="faq_h2">Barber questions, <span class="italic text-gradient">answered.</span></h2>
 </div>
 <div class="max-w-3xl space-y-1">
 <details class="group border-b border-outline-variant/10" open>
 <summary class="list-none [&amp;::-webkit-details-marker]:hidden flex justify-between items-center gap-4 cursor-pointer py-5">
-<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Is Go2Cut really 0% commission for barbers?</h3>
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors" data-i18n="faq_q1">Is Go2Cut really 0% commission for barbers?</h3>
 <span class="material-symbols-outlined text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
-<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl">Yes. Go2Cut charges 0% commission on your bookings, so you keep 100% of your service revenue.</p>
+<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl" data-i18n="faq_a1">Yes. Go2Cut charges 0% commission on your bookings, so you keep 100% of your service revenue.</p>
 </details>
 <details class="group border-b border-outline-variant/10">
 <summary class="list-none [&amp;::-webkit-details-marker]:hidden flex justify-between items-center gap-4 cursor-pointer py-5">
-<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">How does Go2Cut help barbers get more clients?</h3>
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors" data-i18n="faq_q2">How does Go2Cut help barbers get more clients?</h3>
 <span class="material-symbols-outlined text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
-<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl">When you have an empty slot, create an Instant Campaign and Go2Cut sends a push notification to every customer using the app within 2 miles of your shop, filling the chair fast.</p>
+<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl" data-i18n="faq_a2">When you have an empty slot, create an Instant Campaign and Go2Cut sends a push notification to every customer using the app within 2 miles of your shop, filling the chair fast.</p>
 </details>
 <details class="group border-b border-outline-variant/10">
 <summary class="list-none [&amp;::-webkit-details-marker]:hidden flex justify-between items-center gap-4 cursor-pointer py-5">
-<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">How much does the Go2Cut barber app cost?</h3>
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors" data-i18n="faq_q3">How much does the Go2Cut barber app cost?</h3>
 <span class="material-symbols-outlined text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
-<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl">There is no booking commission and no setup fee. Join the waitlist to become a founding barber.</p>
+<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl" data-i18n="faq_a3">There is no booking commission and no setup fee. Join the waitlist to become a founding barber.</p>
 </details>
 <details class="group border-b border-outline-variant/10">
 <summary class="list-none [&amp;::-webkit-details-marker]:hidden flex justify-between items-center gap-4 cursor-pointer py-5">
-<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">When does the Go2Cut app launch?</h3>
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors" data-i18n="faq_q4">When does the Go2Cut app launch?</h3>
 <span class="material-symbols-outlined text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
-<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl">Go2Cut is launching soon on the App Store and Google Play. Apply now to be one of the first 100 shops, featured free for a full month at launch.</p>
+<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl" data-i18n="faq_a4">Go2Cut is launching soon on the App Store and Google Play. Apply now to be one of the first 100 shops, featured free for a full month at launch.</p>
 </details>
 <details class="group border-b border-outline-variant/10">
 <summary class="list-none [&amp;::-webkit-details-marker]:hidden flex justify-between items-center gap-4 cursor-pointer py-5">
-<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors">Where is Go2Cut available?</h3>
+<h3 class="font-headline-md text-body-lg text-on-surface group-hover:text-primary transition-colors" data-i18n="faq_q5">Where is Go2Cut available?</h3>
 <span class="material-symbols-outlined text-primary flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
 </summary>
-<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl">Go2Cut is launching across the United Kingdom. Register your shop now to go live in your area from day one.</p>
+<p class="font-body-md text-body-md text-on-surface-variant pb-5 leading-relaxed max-w-2xl" data-i18n="faq_a5">Go2Cut is launching across the United Kingdom. Register your shop now to go live in your area from day one.</p>
 </details>
 </div>
 </section>
 <!-- Coming soon stores -->
 <section class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-8">
 <div class="bg-surface-container-low/70 border border-outline-variant/10 rounded-lg p-10 md:p-14 text-center">
-<span class="font-label-caps text-label-caps text-primary mb-4 block">LAUNCHING SOON</span>
-<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-4">Coming soon to <span class="italic text-gradient">App Store &amp; Google Play.</span></h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-8">The Go2Cut app launches soon on iOS and Android. Apply now to be one of our founding barbers and go live from day one.</p>
+<span class="font-label-caps text-label-caps text-primary mb-4 block" data-i18n="soon_kicker">LAUNCHING SOON</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-4" data-i18n-html="soon_h2">Coming soon to <span class="italic text-gradient">App Store &amp; Google Play.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-8" data-i18n="soon_p">The Go2Cut app launches soon on iOS and Android. Apply now to be one of our founding barbers and go live from day one.</p>
 <div class="flex flex-wrap justify-center gap-4">
-<span class="inline-flex items-center gap-2 border border-outline-variant/30 rounded-DEFAULT px-5 py-3"><svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7c1.1 0 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.1 0-2.1-.8-2.1-3.3zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg><span class="text-left"><span class="block font-label-caps text-[9px] text-on-surface-variant/50 uppercase">Coming soon on the</span><span class="block font-body-md text-sm text-on-surface">App Store</span></span></span>
-<span class="inline-flex items-center gap-2 border border-outline-variant/30 rounded-DEFAULT px-5 py-3"><svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l.1.1L13 13v-.2L3.7 2.2l-.1.1zM16.5 16.2l-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1 .6 1 1.6 0 2.2l-3.7 2.1-.1-.1zM13.4 12.9L16.6 16.1 5 22.7c-.5.3-1 .3-1.4 0l9.8-9.8zM13.4 11.1L3.6 1.3c.4-.3.9-.3 1.4 0l11.6 6.6-3.2 3.2z"/></svg><span class="text-left"><span class="block font-label-caps text-[9px] text-on-surface-variant/50 uppercase">Coming soon on</span><span class="block font-body-md text-sm text-on-surface">Google Play</span></span></span>
+<span class="inline-flex items-center gap-2 border border-outline-variant/30 rounded-DEFAULT px-5 py-3"><svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.2 1 0 1.4-.7 2.7-.7s1.6.7 2.7.7c1.1 0 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.1 0-2.1-.8-2.1-3.3zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2z"/></svg><span class="text-left"><span class="block font-label-caps text-[9px] text-on-surface-variant/50 uppercase" data-i18n="soon_appstore_pre">Coming soon on the</span><span class="block font-body-md text-sm text-on-surface">App Store</span></span></span>
+<span class="inline-flex items-center gap-2 border border-outline-variant/30 rounded-DEFAULT px-5 py-3"><svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l.1.1L13 13v-.2L3.7 2.2l-.1.1zM16.5 16.2l-3.1-3.1v-.2l3.1-3.1.1.1 3.7 2.1c1 .6 1 1.6 0 2.2l-3.7 2.1-.1-.1zM13.4 12.9L16.6 16.1 5 22.7c-.5.3-1 .3-1.4 0l9.8-9.8zM13.4 11.1L3.6 1.3c.4-.3.9-.3 1.4 0l11.6 6.6-3.2 3.2z"/></svg><span class="text-left"><span class="block font-label-caps text-[9px] text-on-surface-variant/50 uppercase" data-i18n="soon_googleplay_pre">Coming soon on</span><span class="block font-body-md text-sm text-on-surface">Google Play</span></span></span>
 </div>
 </div>
 </section>
@@ -409,26 +409,26 @@
 <div class="mb-12 bg-gradient-to-r from-primary-container/25 via-primary-container/10 to-transparent border border-primary/30 rounded-lg p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
 <span class="material-symbols-outlined text-primary text-5xl flex-shrink-0">stars</span>
 <div class="flex-1">
-<span class="font-label-caps text-label-caps text-primary uppercase">Founding Barber Campaign</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mt-1">The first 100 shops get featured free for a full month.</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2">Be one of the first 100 barber shops to register and we&rsquo;ll spotlight you at the top of Go2Cut for <span class="text-primary">one month at launch</span> &mdash; premium placement in front of every nearby customer, completely on us.</p>
+<span class="font-label-caps text-label-caps text-primary uppercase" data-i18n="camp_kicker">Founding Barber Campaign</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1" data-i18n="camp_h">The first 100 shops get featured free for a full month.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2" data-i18n-html="camp_p">Be one of the first 100 barber shops to register and we&rsquo;ll spotlight you at the top of Go2Cut for <span class="text-primary">one month at launch</span> &mdash; premium placement in front of every nearby customer, completely on us.</p>
 </div>
 <div class="text-center flex-shrink-0 border-l border-primary/20 pl-6">
 <span class="block font-display-lg text-[52px] leading-none text-primary font-bold">100</span>
-<span class="font-label-caps text-[10px] text-on-surface-variant/60 uppercase tracking-[0.15em]">spots only</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant/60 uppercase tracking-[0.15em]" data-i18n="camp_spots">spots only</span>
 </div>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter" id="apply">
 <div class="lg:col-span-5">
-<span class="font-label-caps text-label-caps text-primary mb-4 block">JOIN GO2CUT</span>
-<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-6">Register your <span class="italic text-gradient">shop.</span></h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">This form adds your shop directly to the Go2Cut barber system. Once you submit, we register your business and reach out before launch to verify your details and set up your profile, services, and first Instant Campaign &mdash; so you go live to customers from day one.</p>
-<p class="font-body-md text-body-md text-on-surface mb-8">Submit early: the <span class="text-primary">first 100 shops to register</span> are featured at the top of the app, free, for a full month at launch.</p>
+<span class="font-label-caps text-label-caps text-primary mb-4 block" data-i18n="join_kicker">JOIN GO2CUT</span>
+<h2 class="font-display-lg text-display-lg-mobile leading-tight mb-6" data-i18n-html="join_h2">Register your <span class="italic text-gradient">shop.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6" data-i18n="join_p1">This form adds your shop directly to the Go2Cut barber system. Once you submit, we register your business and reach out before launch to verify your details and set up your profile, services, and first Instant Campaign &mdash; so you go live to customers from day one.</p>
+<p class="font-body-md text-body-md text-on-surface mb-8" data-i18n-html="join_p2">Submit early: the <span class="text-primary">first 100 shops to register</span> are featured at the top of the app, free, for a full month at launch.</p>
 <ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Added straight into the Go2Cut barber network</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> 0% commission on your bookings</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> Reach every customer within 2 miles</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span> First 100 shops featured free for 1 month</li>
+<li class="flex items-center gap-3" data-i18n-html="join_li1"><span class="material-symbols-outlined text-primary">check_circle</span> Added straight into the Go2Cut barber network</li>
+<li class="flex items-center gap-3" data-i18n-html="join_li2"><span class="material-symbols-outlined text-primary">check_circle</span> 0% commission on your bookings</li>
+<li class="flex items-center gap-3" data-i18n-html="join_li3"><span class="material-symbols-outlined text-primary">check_circle</span> Reach every customer within 2 miles</li>
+<li class="flex items-center gap-3" data-i18n-html="join_li4"><span class="material-symbols-outlined text-primary">check_circle</span> First 100 shops featured free for 1 month</li>
 </ul>
 </div>
 <div class="lg:col-span-7">
@@ -437,64 +437,64 @@
 <input type="hidden" name="csrf_token" id="csrf_token" value=""/>
 <input type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"/>
 <div>
-<h3 class="font-headline-md text-headline-md mb-1">Your business</h3>
-<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6">Tell us where to find your shop.</p>
+<h3 class="font-headline-md text-headline-md mb-1" data-i18n="form_biz_h">Your business</h3>
+<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6" data-i18n="form_biz_sub">Tell us where to find your shop.</p>
 <div class="space-y-5">
 <div>
-<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="business">Business name <span class="text-primary">*</span></label>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="business" data-i18n-html="lbl_business">Business name <span class="text-primary">*</span></label>
 <input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="business" name="business_name" required type="text" autocomplete="organization"/>
 </div>
 <div>
-<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="addr1">Address line 1 <span class="text-primary">*</span></label>
-<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="addr1" name="address_line_1" placeholder="Number and street" required type="text" autocomplete="address-line1"/>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="addr1" data-i18n-html="lbl_addr1">Address line 1 <span class="text-primary">*</span></label>
+<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="addr1" name="address_line_1" placeholder="Number and street" data-i18n-ph="ph_addr1" required type="text" autocomplete="address-line1"/>
 </div>
 <div>
-<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="addr2">Address line 2 <span class="text-on-surface-variant/40 normal-case tracking-normal">(optional)</span></label>
-<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="addr2" name="address_line_2" placeholder="Unit / building" type="text" autocomplete="address-line2"/>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="addr2" data-i18n-html="lbl_addr2">Address line 2 <span class="text-on-surface-variant/40 normal-case tracking-normal">(optional)</span></label>
+<input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="addr2" name="address_line_2" placeholder="Unit / building" data-i18n-ph="ph_addr2" type="text" autocomplete="address-line2"/>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
 <div>
-<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="city">Town / City <span class="text-primary">*</span></label>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="city" data-i18n-html="lbl_city">Town / City <span class="text-primary">*</span></label>
 <input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="city" name="city" required type="text" autocomplete="address-level2"/>
 </div>
 <div>
-<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="postcode">Postcode <span class="text-primary">*</span></label>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="postcode" data-i18n-html="lbl_postcode">Postcode <span class="text-primary">*</span></label>
 <input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0 uppercase" id="postcode" name="postcode" required type="text" autocomplete="postal-code"/>
 </div>
 </div>
 <div>
-<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="country">Country <span class="text-primary">*</span></label>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="country" data-i18n-html="lbl_country">Country <span class="text-primary">*</span></label>
 <select class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="country" name="country" required autocomplete="country-name">
-<option value="United Kingdom" selected>United Kingdom</option>
-<option value="Ireland">Ireland</option>
-<option value="Other">Other</option>
+<option value="United Kingdom" selected data-i18n="opt_uk">United Kingdom</option>
+<option value="Ireland" data-i18n="opt_ie">Ireland</option>
+<option value="Other" data-i18n="opt_other">Other</option>
 </select>
 </div>
 </div>
 </div>
 <div class="border-t border-outline-variant/10 pt-6">
-<h3 class="font-headline-md text-headline-md mb-1">Your details</h3>
-<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6">So we can reach you before launch.</p>
+<h3 class="font-headline-md text-headline-md mb-1" data-i18n="form_you_h">Your details</h3>
+<p class="font-body-md text-body-md text-on-surface-variant/70 mb-6" data-i18n="form_you_sub">So we can reach you before launch.</p>
 <div class="space-y-5">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
 <div>
-<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="name">Contact name <span class="text-primary">*</span></label>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="name" data-i18n-html="lbl_name">Contact name <span class="text-primary">*</span></label>
 <input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="name" name="contact_name" required type="text" autocomplete="name"/>
 </div>
 <div>
-<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="phone">Phone <span class="text-primary">*</span></label>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="phone" data-i18n-html="lbl_phone">Phone <span class="text-primary">*</span></label>
 <input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="phone" name="phone" required type="tel" autocomplete="tel"/>
 </div>
 </div>
 <div>
-<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="email">Email <span class="text-primary">*</span></label>
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase" for="email" data-i18n-html="lbl_email">Email <span class="text-primary">*</span></label>
 <input class="w-full bg-surface-container border border-outline-variant/20 text-on-surface px-5 py-3.5 rounded-DEFAULT focus:border-primary focus:ring-0" id="email" name="email" required type="email" autocomplete="email"/>
 </div>
 </div>
 </div>
-<button class="w-full font-button text-button bg-primary text-on-primary px-10 py-4 rounded-DEFAULT hover:opacity-90 transition-all uppercase" type="submit">Submit Application</button>
+<button class="w-full font-button text-button bg-primary text-on-primary px-10 py-4 rounded-DEFAULT hover:opacity-90 transition-all uppercase" type="submit" data-i18n="btn_submit">Submit Application</button>
 <p class="apply-msg hidden font-body-md text-body-md text-primary text-center"></p>
-<p class="font-body-md text-[13px] text-on-surface-variant/50 text-center">By applying you agree to be contacted about Go2Cut. We&rsquo;ll never share your details.</p>
+<p class="font-body-md text-[13px] text-on-surface-variant/50 text-center" data-i18n="form_consent">By applying you agree to be contacted about Go2Cut. We&rsquo;ll never share your details.</p>
 </form>
 </div>
 </div>
@@ -505,7 +505,7 @@
 <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-14 flex flex-col md:flex-row justify-between items-center gap-8">
 <div class="flex flex-col items-center md:items-start">
 <img alt="Go2Cut barber booking app logo" class="h-16 w-auto mb-3" src="logo.png"/>
-<p class="font-body-md text-body-md text-on-surface-variant/70">Premium barber appointments. 0% commission, 100% yours.</p>
+<p class="font-body-md text-body-md text-on-surface-variant/70" data-i18n="foot_tag">Premium barber appointments. 0% commission, 100% yours.</p>
 </div>
 <div class="flex space-x-3">
 <a class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all" aria-label="YouTube" href="https://www.youtube.com/@Go2Cut-l5y" target="_blank" rel="noopener"><svg class="social-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
@@ -516,8 +516,8 @@
 </div>
 <div class="border-t border-outline-variant/5">
 <div class="px-6 md:px-margin-desktop max-w-container-max mx-auto py-6 text-center">
-<span class="font-label-caps text-label-caps text-on-surface-variant/50">© 2026 Egeo Labs. All rights reserved.</span>
-<a href="privacy.html" class="font-label-caps text-label-caps text-on-surface-variant/50 hover:text-primary underline ml-3">Privacy &amp; Cookie Policy</a>
+<span class="font-label-caps text-label-caps text-on-surface-variant/50" data-i18n="foot_copy">© 2026 Egeo Labs. All rights reserved.</span>
+<a href="privacy.html" class="font-label-caps text-label-caps text-on-surface-variant/50 hover:text-primary underline ml-3" data-i18n="foot_privacy">Privacy &amp; Cookie Policy</a>
 </div>
 </div>
 </footer>
@@ -554,7 +554,7 @@
             e.preventDefault();
             if (!form.checkValidity()) { form.reportValidity(); return; }
 
-            if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = 'Sending…'; }
+            if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = (window.G2Ct?G2Ct('form_sending'):'Sending…'); }
             if (msg) { msg.classList.add('hidden'); }
 
             fetch(FORM_ENDPOINT, {
@@ -564,7 +564,7 @@
             .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
             .then(function (res) {
                 if (res.ok && res.d && res.d.success) {
-                    setMsg("You're in 🎉 Welcome to Go2Cut — you've locked one of our first 100 founding spots, featured free for a full month at launch. We'll be in touch personally before we go live.", false);
+                    setMsg((window.G2Ct?G2Ct('form_success'):"You're in 🎉 Welcome to Go2Cut — you've locked one of our first 100 founding spots, featured free for a full month at launch. We'll be in touch personally before we go live."), false);
                     if (typeof gtag === 'function') {
                         gtag('event', 'generate_lead', { form_name: 'barber_application', currency: 'GBP', value: 1 });
                         gtag('event', 'conversion', { 'send_to': 'AW-18227285132/YSaFCKjA3MMcElyZufND' });
@@ -572,10 +572,10 @@
                     form.reset();
                     var c = document.getElementById('country'); if (c) c.value = 'United Kingdom';
                 } else {
-                    setMsg((res.d && res.d.message) || 'Something went wrong. Please try again, or email us.', true);
+                    setMsg((res.d && res.d.message) || (window.G2Ct?G2Ct('form_err_generic'):'Something went wrong. Please try again, or email us.'), true);
                 }
             })
-            .catch(function () { setMsg('Network error. Please check your connection and try again.', true); })
+            .catch(function () { setMsg((window.G2Ct?G2Ct('form_err_network'):'Network error. Please check your connection and try again.'), true); })
             .finally(function () { if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || 'Submit Application'; } });
         });
     });
@@ -583,13 +583,13 @@
 <!-- Cerez onay banner'i (Consent Mode v2) -->
 <div id="cookie-banner" style="position:fixed;left:0;right:0;bottom:0;z-index:9999;display:none;background:#1a1a1a;border-top:1px solid rgba(200,169,107,.35);box-shadow:0 -10px 34px rgba(0,0,0,.55);">
   <div style="max-width:1100px;margin:0 auto;padding:18px 22px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between;">
-    <p style="margin:0;color:#cfcabf;font-size:13.5px;line-height:1.55;flex:1 1 340px;font-family:'Hanken Grotesk',system-ui,sans-serif;">
+    <p style="margin:0;color:#cfcabf;font-size:13.5px;line-height:1.55;flex:1 1 340px;font-family:'Hanken Grotesk',system-ui,sans-serif;" data-i18n-html="cookie_text">
       We use cookies for analytics and advertising to improve Go2Cut and measure our campaigns. You can accept or reject non-essential cookies.
       <a href="privacy.html" style="color:#e5c484;text-decoration:underline;">Privacy &amp; Cookie Policy</a>.
     </p>
     <div style="display:flex;gap:10px;flex:0 0 auto;">
-      <button id="cookie-reject" type="button" style="cursor:pointer;padding:10px 20px;border:1px solid rgba(200,169,107,.45);background:transparent;color:#cfcabf;font-size:13px;letter-spacing:.04em;border-radius:2px;font-family:'Hanken Grotesk',system-ui,sans-serif;">Reject</button>
-      <button id="cookie-accept" type="button" style="cursor:pointer;padding:10px 20px;border:1px solid #c8a96b;background:#c8a96b;color:#131313;font-weight:700;font-size:13px;letter-spacing:.04em;border-radius:2px;font-family:'Hanken Grotesk',system-ui,sans-serif;">Accept</button>
+      <button id="cookie-reject" type="button" style="cursor:pointer;padding:10px 20px;border:1px solid rgba(200,169,107,.45);background:transparent;color:#cfcabf;font-size:13px;letter-spacing:.04em;border-radius:2px;font-family:'Hanken Grotesk',system-ui,sans-serif;" data-i18n="cookie_reject">Reject</button>
+      <button id="cookie-accept" type="button" style="cursor:pointer;padding:10px 20px;border:1px solid #c8a96b;background:#c8a96b;color:#131313;font-weight:700;font-size:13px;letter-spacing:.04em;border-radius:2px;font-family:'Hanken Grotesk',system-ui,sans-serif;" data-i18n="cookie_accept">Accept</button>
     </div>
   </div>
 </div>
@@ -629,25 +629,25 @@
 <div id="g2c-ovl" style="position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:90;display:none"></div>
 <div id="g2c-auth" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:100;background:#1a1a1a;border:1px solid rgba(200,169,107,.18);border-radius:8px;width:400px;max-width:92vw;padding:26px;display:none;font-family:'Hanken Grotesk',system-ui,sans-serif;color:#e7e3d8;max-height:92vh;overflow:auto">
   <h3 id="g2c-title" style="font-family:'Playfair Display',serif;color:#fff;margin:0 0 4px;font-size:22px">Sign in</h3>
-  <p style="color:#a39e92;font-size:13px;margin:0 0 16px">Sign in to shop the Go2Cut Store — barbers get trade prices, customers get retail.</p>
+  <p style="color:#a39e92;font-size:13px;margin:0 0 16px" data-i18n="auth_sub">Sign in to shop the Go2Cut Store — barbers get trade prices, customers get retail.</p>
   <div style="display:flex;gap:8px;margin-bottom:8px">
-    <div class="g2c-tab on" id="g2c-tl">Sign in</div>
-    <div class="g2c-tab" id="g2c-tr">Register</div>
+    <div class="g2c-tab on" id="g2c-tl" data-i18n="auth_tab_login">Sign in</div>
+    <div class="g2c-tab" id="g2c-tr" data-i18n="auth_tab_reg">Register</div>
   </div>
   <form id="g2c-form">
-    <div class="g2c-reg g2c-hide"><label>I am a…</label>
-      <div style="display:flex;gap:10px"><div class="g2c-role on" data-role="customer">Customer</div><div class="g2c-role" data-role="barber">Barber</div></div>
+    <div class="g2c-reg g2c-hide"><label data-i18n="auth_iam">I am a…</label>
+      <div style="display:flex;gap:10px"><div class="g2c-role on" data-role="customer" data-i18n="auth_customer">Customer</div><div class="g2c-role" data-role="barber" data-i18n="auth_barber">Barber</div></div>
     </div>
-    <div class="g2c-reg g2c-hide"><label>First name</label><input name="first_name" autocomplete="given-name"/></div>
-    <div class="g2c-reg g2c-hide"><label>Last name</label><input name="last_name" autocomplete="family-name"/></div>
-    <div class="g2c-reg g2c-barber g2c-hide"><label>Shop name</label><input name="shop_name" autocomplete="organization"/></div>
-    <div class="g2c-reg g2c-hide"><label>Phone</label><input name="phone" type="tel" autocomplete="tel"/></div>
-    <div><label>Email</label><input name="email" type="email" autocomplete="email" required/></div>
-    <div><label>Password</label><input name="password" type="password" minlength="6" autocomplete="current-password" required/></div>
+    <div class="g2c-reg g2c-hide"><label data-i18n="auth_first">First name</label><input name="first_name" autocomplete="given-name"/></div>
+    <div class="g2c-reg g2c-hide"><label data-i18n="auth_last">Last name</label><input name="last_name" autocomplete="family-name"/></div>
+    <div class="g2c-reg g2c-barber g2c-hide"><label data-i18n="auth_shop">Shop name</label><input name="shop_name" autocomplete="organization"/></div>
+    <div class="g2c-reg g2c-hide"><label data-i18n="auth_phone">Phone</label><input name="phone" type="tel" autocomplete="tel"/></div>
+    <div><label data-i18n="auth_email">Email</label><input name="email" type="email" autocomplete="email" required/></div>
+    <div><label data-i18n="auth_password">Password</label><input name="password" type="password" minlength="6" autocomplete="current-password" required/></div>
     <button type="submit" id="g2c-submit">Sign in</button>
     <div id="g2c-msg" style="font-size:13px;margin-top:10px;min-height:18px"></div>
   </form>
-  <p style="text-align:center;margin:14px 0 0"><button id="g2c-close" style="background:none;border:0;color:#a39e92;font-size:13px;cursor:pointer">Close</button></p>
+  <p style="text-align:center;margin:14px 0 0"><button id="g2c-close" style="background:none;border:0;color:#a39e92;font-size:13px;cursor:pointer" data-i18n="auth_close">Close</button></p>
 </div>
 <script>
 (function(){
@@ -665,8 +665,8 @@
     $('#g2c-tl').classList.toggle('on', m==='login'); $('#g2c-tr').classList.toggle('on', m==='register');
     document.querySelectorAll('#g2c-auth .g2c-reg').forEach(function(e){ e.classList.toggle('g2c-hide', m!=='register'); });
     barberFields();
-    $('#g2c-title').textContent = m==='login' ? 'Sign in' : 'Create your account';
-    $('#g2c-submit').textContent = m==='login' ? 'Sign in' : 'Register';
+    $('#g2c-title').textContent = m==='login' ? (window.G2Ct?G2Ct('auth_title_login'):'Sign in') : (window.G2Ct?G2Ct('auth_title_register'):'Create your account');
+    $('#g2c-submit').textContent = m==='login' ? (window.G2Ct?G2Ct('auth_submit_login'):'Sign in') : (window.G2Ct?G2Ct('auth_submit_register'):'Register');
     $('#g2c-msg').textContent='';
   }
   function logout(){ user=null; token=null; localStorage.removeItem('g2c_store_token'); localStorage.removeItem('g2c_store_user'); renderHeader(); }
@@ -701,17 +701,18 @@
         if(res.ok && res.d && res.d.token){
           token=res.d.token; user=res.d.user||null;
           localStorage.setItem('g2c_store_token',token); localStorage.setItem('g2c_store_user',JSON.stringify(user));
-          msg.style.color='#7faf7f'; msg.textContent='Welcome! You can now shop the Store.';
+          msg.style.color='#7faf7f'; msg.textContent=(window.G2Ct?G2Ct('auth_welcome'):'Welcome! You can now shop the Store.');
           renderHeader(); setTimeout(closeAuth, 800);
         } else {
           msg.style.color='#e07a5f';
-          msg.textContent=(res.d && (res.d.message || (res.d.errors && Object.values(res.d.errors)[0][0]))) || 'Could not sign in. Check your details.';
+          msg.textContent=(res.d && (res.d.message || (res.d.errors && Object.values(res.d.errors)[0][0]))) || (window.G2Ct?G2Ct('auth_err_generic'):'Could not sign in. Check your details.');
         }
       })
-      .catch(function(){ msg.style.color='#e07a5f'; msg.textContent='Network error. Please try again.'; })
+      .catch(function(){ msg.style.color='#e07a5f'; msg.textContent=(window.G2Ct?G2Ct('auth_err_network'):'Network error. Please try again.'); })
       .finally(function(){ btn.disabled=false; });
   });
   renderHeader(); setMode('login');
+  window.G2CrefreshAuth=function(){ try{ setMode(mode); }catch(e){} };
   if(!user && /[?&]auth=1/.test(location.search)) openAuth();
 })();
 </script>
@@ -733,6 +734,68 @@
     try { sessionStorage.setItem('g2c_country', c); } catch(e){}
     applyGate(c);
   }).catch(function(){ applyGate(''); });        // geo başarısız → göster (UK varsayılanı)
+})();
+</script>
+<script type="application/json" id="g2c-i18n">{"en": {"_js": {"auth_title_login": "Sign in", "auth_title_register": "Create your account", "auth_submit_login": "Sign in", "auth_submit_register": "Register", "auth_welcome": "Welcome! You can now shop the Store.", "auth_err_generic": "Could not sign in. Check your details.", "auth_err_network": "Network error. Please try again.", "form_sending": "Sending…", "form_success": "You're in 🎉 Welcome to Go2Cut — you've locked one of our first 100 founding spots, featured free for a full month at launch. We'll be in touch personally before we go live.", "form_err_generic": "Something went wrong. Please try again, or email us.", "form_err_network": "Network error. Please check your connection and try again."}}, "tr": {"nav_how": "Nasıl Çalışır", "nav_barbers": "Berberler İçin", "nav_customers": "Müşteriler İçin", "nav_faq": "SSS", "badge_free": "%100 Ücretsiz Berber Uygulaması", "btn_store": "<span aria-hidden=\"true\">🛍️</span> Mağaza", "hero_badge": "<span class=\"w-1.5 h-1.5 rounded-full bg-primary\"></span> Çok yakında · App Store &amp; Google Play", "hero_h1": "Koltuğunu Büyüt. <span class=\"italic font-normal text-gradient\">%100'ü Sende Kalsın.</span>", "hero_p": "Go2Cut, bağımsız Birleşik Krallık berberleri için premium <strong class=\"font-semibold text-on-surface\">berber randevu uygulaması</strong>. Randevularını <span class=\"text-primary\">%0 komisyonla</span> al, dükkânının 2 mil çevresindeki her müşteriye ulaşarak boş koltuklarını anında doldur.", "hero_cta1": "Katılmak İçin Başvur", "hero_cta2": "Nasıl Çalıştığını Gör", "hero_founding": "<span class=\"text-primary font-semibold\">Kurucu teklifi:</span> ilk 100 dükkân bir ay boyunca ücretsiz öne çıkarılır.", "hero_launch_on": "Çok yakında şurada", "band_h2": "Komisyon. Nokta.", "band_p": "Go2Cut üzerinden aldığın her randevu %100 senin. Hizmet gelirinden asla rezervasyon ücreti alınmaz — hiçbir zaman.", "band_cta": "Partner Ol", "how_kicker": "OYUNU DEĞİŞTİREN", "how_h2": "Hiçbir koltuk <span class=\"italic text-gradient\">boş kalmasın.</span>", "how_p": "Sessiz bir öğleden sonra sana para kaybettirir. Go2Cut Anlık Kampanyalar ile son dakika boşluklarını <span class=\"text-primary\">dükkânının 2 mil çevresindeki her Go2Cut müşterisine</span> ulaşarak doldurursun &mdash; saniyeler içinde, doğrudan telefonlarına.", "how_s1_h": "Boşluğu yakala", "how_s1_p": "Bu öğleden sonra boş bir slot mu var? Uygulamayı aç ve <span class=\"text-on-surface\">Fırsat Oluştur</span>'a dokun.", "how_s2_h": "Teklifini belirle", "how_s2_p": "Hizmeti, zaman aralığını ve yakındaki müşterileri cezbedecek özel bir fiyatı seç — kontrol tamamen sende.", "how_s3_h": "2 mil içindeki herkese bildirim gönderiyoruz", "how_s3_p": "Go2Cut, dükkânının 2 millik yarıçapındaki uygulamayı kullanan her müşteriye anında bir push bildirimi gönderir. Posta listesi yok, reklam harcaması yok — sadece anlık yerel erişim.", "how_s4_h": "Koltuk doldu, %100 senin", "how_s4_p": "Yakındaki bir müşteri birkaç dokunuşla randevu alır ve gelir. Ölü zamanı gelire çevirdin — %0 komisyonla.", "push_now": "Şimdi", "push_within": "2 mil içinde", "push_body": "<span class=\"text-primary\">Taze bir kesimde %20 indirim</span> — The Sharp Fade'de bugün 15:30'da boş koltuk. Kaçmadan almak için dokun.", "push_book": "Hemen Randevu Al", "push_later": "Sonra", "push_sample": "Örnek push bildirimi", "barbers_kicker": "BERBERLER İÇİN", "barbers_h2": "Başarılı bir koltuk işletmek için ihtiyacın olan <span class=\"italic text-gradient\">her şey.</span>", "feat1_h": "%0 Komisyon", "feat1_p": "Hizmet gelirinin her kuruşunu sakla. Emeğinden asla pay almayız.", "feat2_h": "Anlık Kampanyalar", "feat2_p": "Tek dokunuşla 2 mil içindeki her müşteriye haber vererek sessiz slotları doldur.", "feat3_h": "Akıllı Takvim", "feat3_p": "Gününü akışta tutan otomatik randevular, hatırlatmalar ve gelmeme koruması.", "feat4_h": "Müşteri CRM’i", "feat4_p": "Tercihleri ve geçmişi hatırla, sadakat avantajlarıyla düzenli müşterileri geri getir.", "feat5_h": "Gelir Paneli", "feat5_p": "Kazançları, yoğun saatleri ve büyümeyi gerçek zamanlı izle — rakamlarını bil.", "feat6_h": "Doğrulanmış Profil", "feat6_p": "Hak ettiğin müşterileri çekmek için portföyünü ve yorumlarını sergile.", "cust_kicker": "MÜŞTERİLER İÇİN", "cust_h2": "Hazır bir kitle, <span class=\"italic text-gradient\">hemen yakınında.</span>", "cust_p": "Müşteriler harika berberleri hızlıca bulup randevu almak için Go2Cut’a katılır. Büyüyen bu yerel kitle, Anlık Kampanyalarını görecek olan tam da o kişilerdir — böylece her boş slotu dolduracak biri hazır olur.", "cust1_h": "Yakındakileri Keşfet", "cust1_p": "En yüksek puanlı berberleri haritada, portföyleri ve doğrulanmış yorumlarıyla bul.", "cust2_h": "Anlık Fırsatlar", "cust2_p": "Kampanyaları kap — hemen köşedeki berberlerden son dakika teklifleri.", "cust3_h": "Saniyeler İçinde Randevu Al", "cust3_p": "Gerçek zamanlı müsaitlik ve anında onay — telefon yok, bekleme yok.", "cust4_h": "Doğrulanmış Yorumlar", "cust4_p": "Gerçek puanlar ve portföyler — ayrıca her ziyaret öncesi akıllı hatırlatmalar.", "inside_kicker": "UYGULAMANIN İÇİ", "inside_h2": "Müşteriler seni işte böyle <span class=\"italic text-gradient\">bulur ve randevu alır.</span>", "inside_p": "2 mil içindeki her müşteri dükkânını haritada, yorumlarını ve fiyatlarını görür — ve koltuğuna birkaç dokunuşla randevu alır. Sen sadece gelip kesersin.", "inside_cap1": "Müşteriler seni haritada keşfeder &mdash; <span class=\"text-on-surface\">&ldquo;Şimdi müsait&rdquo;, 0,1 mil uzakta.</span>", "inside_cap2": "Profilin, yorumların ve fiyatların &mdash; <span class=\"text-on-surface\">birkaç dokunuşla randevu.</span>", "faq_kicker": "SSS", "faq_h2": "Berber soruları, <span class=\"italic text-gradient\">yanıtlandı.</span>", "faq_q1": "Go2Cut berberler için gerçekten %0 komisyon mu?", "faq_a1": "Evet. Go2Cut randevularından %0 komisyon alır, böylece hizmet gelirinin %100’ü sende kalır.", "faq_q2": "Go2Cut berberlerin daha fazla müşteri bulmasına nasıl yardım eder?", "faq_a2": "Boş bir slotun olduğunda bir Anlık Kampanya oluştur; Go2Cut dükkânının 2 mil çevresinde uygulamayı kullanan her müşteriye bir push bildirimi göndererek koltuğu hızla doldurur.", "faq_q3": "Go2Cut berber uygulaması ne kadar?", "faq_a3": "Rezervasyon komisyonu ve kurulum ücreti yoktur. Kurucu berber olmak için bekleme listesine katıl.", "faq_q4": "Go2Cut uygulaması ne zaman çıkıyor?", "faq_a4": "Go2Cut çok yakında App Store ve Google Play’de yayınlanıyor. İlk 100 dükkândan biri olmak için hemen başvur; lansmanda tam bir ay boyunca ücretsiz öne çıkarılırsın.", "faq_q5": "Go2Cut nerede kullanılabilir?", "faq_a5": "Go2Cut Birleşik Krallık genelinde yayına giriyor. Bölgende ilk günden yayında olmak için dükkânını şimdi kaydet.", "soon_kicker": "ÇOK YAKINDA", "soon_h2": "Çok yakında <span class=\"italic text-gradient\">App Store &amp; Google Play’de.</span>", "soon_p": "Go2Cut uygulaması çok yakında iOS ve Android’de yayınlanıyor. Kurucu berberlerimizden biri olmak ve ilk günden yayında olmak için hemen başvur.", "soon_appstore_pre": "Çok yakında şurada:", "soon_googleplay_pre": "Çok yakında şurada:", "camp_kicker": "Kurucu Berber Kampanyası", "camp_h": "İlk 100 dükkân bir ay boyunca ücretsiz öne çıkarılır.", "camp_p": "Kaydolan ilk 100 berber dükkânından biri ol, seni <span class=\"text-primary\">lansmanda bir ay boyunca</span> Go2Cut’ın en üstünde öne çıkaralım &mdash; yakındaki her müşterinin önünde premium yerleşim, tamamen bizden.", "camp_spots": "sınırlı kontenjan", "join_kicker": "GO2CUT’A KATIL", "join_h2": "Dükkânını <span class=\"italic text-gradient\">kaydet.</span>", "join_p1": "Bu form dükkânını doğrudan Go2Cut berber sistemine ekler. Gönderdiğinde işletmeni kaydeder ve lansmandan önce bilgilerini doğrulamak ve profilini, hizmetlerini ve ilk Anlık Kampanyanı kurmak için sana ulaşırız — böylece ilk günden müşterilere yayında olursun.", "join_p2": "Erken gönder: kaydolan <span class=\"text-primary\">ilk 100 dükkân</span> lansmanda tam bir ay boyunca uygulamanın en üstünde ücretsiz öne çıkarılır.", "join_li1": "<span class=\"material-symbols-outlined text-primary\">check_circle</span> Doğrudan Go2Cut berber ağına eklenirsin", "join_li2": "<span class=\"material-symbols-outlined text-primary\">check_circle</span> Randevularında %0 komisyon", "join_li3": "<span class=\"material-symbols-outlined text-primary\">check_circle</span> 2 mil içindeki her müşteriye ulaş", "join_li4": "<span class=\"material-symbols-outlined text-primary\">check_circle</span> İlk 100 dükkân 1 ay ücretsiz öne çıkarılır", "form_biz_h": "İşletmen", "form_biz_sub": "Dükkânını nerede bulacağımızı söyle.", "lbl_business": "İşletme adı <span class=\"text-primary\">*</span>", "lbl_addr1": "Adres satırı 1 <span class=\"text-primary\">*</span>", "ph_addr1": "Numara ve sokak", "lbl_addr2": "Adres satırı 2 <span class=\"text-on-surface-variant/40 normal-case tracking-normal\">(isteğe bağlı)</span>", "ph_addr2": "Birim / bina", "lbl_city": "Kasaba / Şehir <span class=\"text-primary\">*</span>", "lbl_postcode": "Posta kodu <span class=\"text-primary\">*</span>", "lbl_country": "Ülke <span class=\"text-primary\">*</span>", "opt_uk": "Birleşik Krallık", "opt_ie": "İrlanda", "opt_other": "Diğer", "form_you_h": "Bilgilerin", "form_you_sub": "Lansmandan önce sana ulaşabilmemiz için.", "lbl_name": "İletişim adı <span class=\"text-primary\">*</span>", "lbl_phone": "Telefon <span class=\"text-primary\">*</span>", "lbl_email": "E-posta <span class=\"text-primary\">*</span>", "btn_submit": "Başvuruyu Gönder", "form_consent": "Başvurarak Go2Cut hakkında iletişime geçilmesini kabul edersin. Bilgilerini asla paylaşmayız.", "foot_tag": "Premium berber randevuları. %0 komisyon, %100 senin.", "foot_copy": "© 2026 Egeo Labs. Tüm hakları saklıdır.", "foot_privacy": "Gizlilik ve Çerez Politikası", "cookie_text": "Go2Cut’ı geliştirmek ve kampanyalarımızı ölçmek için analitik ve reklam çerezleri kullanıyoruz. Zorunlu olmayan çerezleri kabul edebilir veya reddedebilirsin. <a href=\"privacy.html\" style=\"color:#e5c484;text-decoration:underline;\">Gizlilik ve Çerez Politikası</a>.", "cookie_reject": "Reddet", "cookie_accept": "Kabul Et", "auth_sub": "Go2Cut Mağaza’sından alışveriş için giriş yap — berberler toptan, müşteriler perakende fiyat alır.", "auth_tab_login": "Giriş yap", "auth_tab_reg": "Kayıt ol", "auth_iam": "Ben bir…", "auth_customer": "Müşteri", "auth_barber": "Berber", "auth_first": "Ad", "auth_last": "Soyad", "auth_shop": "Dükkân adı", "auth_phone": "Telefon", "auth_email": "E-posta", "auth_password": "Şifre", "auth_close": "Kapat", "_js": {"auth_title_login": "Giriş yap", "auth_title_register": "Hesabını oluştur", "auth_submit_login": "Giriş yap", "auth_submit_register": "Kayıt ol", "auth_welcome": "Hoş geldin! Artık Mağaza’dan alışveriş yapabilirsin.", "auth_err_generic": "Giriş yapılamadı. Bilgilerini kontrol et.", "auth_err_network": "Ağ hatası. Lütfen tekrar dene.", "form_sending": "Gönderiliyor…", "form_success": "İçindesin 🎉 Go2Cut’a hoş geldin — ilk 100 kurucu kontenjanından birini kaptın, lansmanda tam bir ay ücretsiz öne çıkarılacaksın. Yayına geçmeden önce seninle bizzat iletişime geçeceğiz.", "form_err_generic": "Bir şeyler ters gitti. Lütfen tekrar dene ya da bize e-posta gönder.", "form_err_network": "Ağ hatası. Bağlantını kontrol edip tekrar dene."}}}</script>
+<script>
+// ===== Go2Cut i18n — otomatik dil (ülke→dil) + seçici; EN default, çeviri yoksa EN'e düşer =====
+(function(){
+  var SUPPORTED=["en","tr","da","fr","de","it","es","no"];
+  var C2L={GB:"en",IE:"en",US:"en",AU:"en",DK:"da",TR:"tr",FR:"fr",BE:"fr",DE:"de",AT:"de",CH:"de",IT:"it",ES:"es",NO:"no"};
+  var LABELS={en:"English",tr:"Türkçe",da:"Dansk",fr:"Français",de:"Deutsch",it:"Italiano",es:"Español",no:"Norsk"};
+  var I18N={}; try{ I18N=JSON.parse(document.getElementById("g2c-i18n").textContent)||{}; }catch(e){}
+  var nodes=[];
+  document.querySelectorAll("[data-i18n],[data-i18n-html]").forEach(function(el){
+    var html=el.hasAttribute("data-i18n-html");
+    var key=el.getAttribute(html?"data-i18n-html":"data-i18n");
+    nodes.push({el:el,key:key,html:html,en:html?el.innerHTML:el.textContent});
+  });
+  var phNodes=[];
+  document.querySelectorAll("[data-i18n-ph]").forEach(function(el){
+    phNodes.push({el:el,key:el.getAttribute("data-i18n-ph"),en:el.getAttribute("placeholder")});
+  });
+  var current="en";
+  function tv(lang,key,en){ var d=I18N[lang]; return (d&&d[key]!=null)?d[key]:en; }
+  window.G2Ct=function(key){
+    var j=(I18N[current]&&I18N[current]._js)||{}; if(j[key]!=null) return j[key];
+    var e=(I18N.en&&I18N.en._js)||{}; return e[key]!=null?e[key]:key;
+  };
+  function apply(lang){
+    current=lang;
+    nodes.forEach(function(n){ var v=tv(lang,n.key,n.en); if(n.html)n.el.innerHTML=v; else n.el.textContent=v; });
+    phNodes.forEach(function(n){ n.el.setAttribute("placeholder",tv(lang,n.key,n.en)); });
+    try{ document.documentElement.setAttribute("lang", lang==="en"?"en-GB":lang); }catch(e){}
+    var cur=document.getElementById("g2c-lang-cur"); if(cur)cur.textContent=(LABELS[lang]||"English");
+    try{ document.querySelectorAll("#g2c-lang-menu [data-lang]").forEach(function(b){ b.style.color=(b.getAttribute("data-lang")===lang)?"#e5c484":"#cfcabf"; }); }catch(e){}
+    if(typeof window.G2CrefreshAuth==="function") window.G2CrefreshAuth();
+  }
+  window.G2CsetLang=function(lang,persist){ if(SUPPORTED.indexOf(lang)<0)lang="en"; if(persist){try{localStorage.setItem("g2c_lang",lang);}catch(e){}} apply(lang); };
+  function pick(country){
+    var saved=null; try{saved=localStorage.getItem("g2c_lang");}catch(e){}
+    if(saved&&SUPPORTED.indexOf(saved)>=0) return saved;
+    if(country&&C2L[country]) return C2L[country];
+    var nav=(navigator.language||"en").slice(0,2).toLowerCase();
+    if(SUPPORTED.indexOf(nav)>=0) return nav;
+    return "en";
+  }
+  var cc=null; try{cc=sessionStorage.getItem("g2c_country");}catch(e){}
+  apply(pick(cc));
+  if(cc===null){
+    fetch("/geo.php").then(function(r){return r.json();}).then(function(d){
+      var c=(d&&d.country)||""; try{sessionStorage.setItem("g2c_country",c);}catch(e){}
+      var saved=null; try{saved=localStorage.getItem("g2c_lang");}catch(e){}
+      if(!saved) apply(pick(c));
+    }).catch(function(){});
+  }
+  var btn=document.getElementById("g2c-lang-btn"), menu=document.getElementById("g2c-lang-menu");
+  if(btn&&menu){
+    btn.addEventListener("click",function(e){ e.stopPropagation(); menu.hidden=!menu.hidden; });
+    document.addEventListener("click",function(){ menu.hidden=true; });
+    menu.addEventListener("click",function(e){ e.stopPropagation(); });
+    menu.querySelectorAll("[data-lang]").forEach(function(b){
+      b.addEventListener("click",function(){ window.G2CsetLang(b.getAttribute("data-lang"),true); menu.hidden=true; });
+    });
+  }
 })();
 </script>
 </body></html>
