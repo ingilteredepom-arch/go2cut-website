@@ -44,6 +44,18 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Do barbers pay less than customers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Verified barbers see trade (wholesale) prices across the range; customers see retail. Sign in to see your pricing." } },
+    { "@type": "Question", "name": "How do I get trade prices?", "acceptedAnswer": { "@type": "Answer", "text": "Create a barber account and get verified. Once approved, trade prices unlock automatically at checkout." } },
+    { "@type": "Question", "name": "Where does the Go2Cut store deliver?", "acceptedAnswer": { "@type": "Answer", "text": "The Go2Cut store delivers within the United Kingdom only, with free delivery on orders over £50." } },
+    { "@type": "Question", "name": "Is payment secure?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — payments are processed securely by Stripe. We never store your card details." } }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -150,6 +162,20 @@
   .shipbar-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:99px;transition:width .3s}
   .shipbar.done .shipbar-fill{background:var(--ok)}
   .hide{display:none!important}
+  /* SEO / taranabilir içerik bölümü */
+  .storecopy{border-top:1px solid var(--line);margin-top:30px;padding:36px 0 72px;color:var(--muted);line-height:1.62;font-size:15px}
+  .storecopy h2{color:#fff;font-size:24px;margin:0 0 10px}
+  .storecopy h3{color:var(--text);font-size:18px;margin:28px 0 8px}
+  .storecopy p{margin:0 0 12px;max-width:72ch}
+  .sc-grid{display:grid;gap:28px}
+  @media(min-width:760px){ .sc-grid{grid-template-columns:1.3fr 1fr} }
+  .sc-list{margin:0;padding-left:18px}
+  .sc-list li{margin:0 0 7px}
+  .sc-cats{color:var(--gold2)}
+  .sc-faq details{border-top:1px solid var(--line);padding:12px 0}
+  .sc-faq summary{cursor:pointer;color:var(--text);font-weight:600;list-style:none}
+  .sc-faq summary::-webkit-details-marker{display:none}
+  .sc-faq details p{margin:8px 0 0}
 </style>
 </head>
 <body>
@@ -158,52 +184,86 @@
   <div class="wrap hbar">
     <a href="index.html"><img src="logo.png" alt="Go2Cut"/></a>
     <nav class="mainnav">
-      <a href="index.html">Home</a>
-      <a href="index.html#how">How It Works</a>
-      <a href="index.html#barbers">For Barbers</a>
-      <a href="index.html#customers">For Customers</a>
-      <a href="index.html#faq">FAQ</a>
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="index.html#how" data-i18n="nav_how">How It Works</a>
+      <a href="index.html#barbers" data-i18n="nav_barbers">For Barbers</a>
+      <a href="index.html#customers" data-i18n="nav_customers">For Customers</a>
+      <a href="index.html#faq" data-i18n="nav_faq">FAQ</a>
     </nav>
     <span class="grow"></span>
-    <a href="store.html" class="store-tab active" aria-current="page"><span aria-hidden="true">🛍️</span> Store</a>
-    <span id="acct-area" class="acct-slot"></span>
+    <a href="store.html" class="store-tab active" aria-current="page" data-i18n-html="store_tab"><span aria-hidden="true">🛍️</span> Store</a>
+    <div id="g2c-lang" style="position:relative"><button id="g2c-lang-btn" type="button" aria-haspopup="true" class="btn btn-sm" style="display:inline-flex;align-items:center;gap:6px"><span aria-hidden="true">🌐</span><span id="g2c-lang-cur">English</span></button><div id="g2c-lang-menu" hidden style="position:absolute;right:0;top:calc(100% + 6px);min-width:150px;background:#1a1a1a;border:1px solid var(--line);border-radius:6px;box-shadow:0 12px 34px rgba(0,0,0,.5);padding:6px;z-index:60"><button type="button" data-lang="en" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">English</button><button type="button" data-lang="tr" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Türkçe</button><button type="button" data-lang="da" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Dansk</button><button type="button" data-lang="fr" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Français</button><button type="button" data-lang="de" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Deutsch</button><button type="button" data-lang="it" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Italiano</button><button type="button" data-lang="es" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Español</button><button type="button" data-lang="no" style="display:block;width:100%;text-align:left;background:none;border:0;color:#cfcabf;font:inherit;font-size:13.5px;padding:8px 12px;border-radius:4px;cursor:pointer">Norsk</button></div></div><span id="acct-area" class="acct-slot"></span>
     <button class="icon-btn" id="cart-btn" aria-label="Cart">🛒<span class="cart-count hide" id="cart-count">0</span></button>
     <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
   </div>
   <nav class="mobile-menu" id="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="index.html#how">How It Works</a>
-    <a href="index.html#barbers">For Barbers</a>
-    <a href="index.html#customers">For Customers</a>
-    <a href="index.html#faq">FAQ</a>
-    <a href="store.html" class="store"><span aria-hidden="true">🛍️</span> Store</a>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="index.html#how" data-i18n="nav_how">How It Works</a>
+    <a href="index.html#barbers" data-i18n="nav_barbers">For Barbers</a>
+    <a href="index.html#customers" data-i18n="nav_customers">For Customers</a>
+    <a href="index.html#faq" data-i18n="nav_faq">FAQ</a>
+    <a href="store.html" class="store" data-i18n-html="store_tab2"><span aria-hidden="true">🛍️</span> Store</a>
     <div class="menu-acct acct-slot"></div>
   </nav>
 </header>
 
 <main class="wrap">
-  <h1 class="title serif">Barber &amp; Grooming Store</h1>
+  <h1 class="title serif" data-i18n-html="st_title">Barber &amp; Grooming Store</h1>
   <p class="sub" id="pricing-note">Sign in to see your pricing. Barbers get trade prices; customers get retail.</p>
 
   <div class="toolbar">
-    <input class="search" id="search" placeholder="Search products…"/>
+    <input class="search" id="search" placeholder="Search products…" data-i18n-ph="search_ph"/>
     <select class="cat" id="cat"><option value="">All categories</option></select>
     <select class="cat" id="brand"><option value="">All brands</option></select>
   </div>
 
   <div id="grid" class="grid"></div>
   <div id="state" class="center">Loading products…</div>
+
+  <!-- ===== Taranabilir SEO içeriği — ürün gridi JS ile yüklenir; bu statik metin Google içindir ===== -->
+  <section class="storecopy" aria-label="About the Go2Cut Store">
+    <div class="sc-grid">
+      <div>
+        <h2 class="serif" data-i18n-html="sc_h2">Professional barber &amp; grooming products at trade prices</h2>
+        <p data-i18n-html="sc_p1">Go2Cut is the UK supply store for barbers and grooming enthusiasts. Verified barbers unlock <strong>trade (wholesale) prices</strong>; customers shop the same professional range at retail. Aftershaves, cream colognes, waxes and pomades, beard care, shaving, tonics, powders and the everyday salon tools — from the brands trusted on the chair.</p>
+        <p data-i18n-html="sc_p2"><a href="javascript:void(0)" data-login>Sign in or create an account</a> to see your pricing. Barber accounts are verified before trade prices unlock.</p>
+      </div>
+      <div>
+        <h3 class="serif" data-i18n="sc_why_h">Why order from Go2Cut</h3>
+        <ul class="sc-list">
+          <li data-i18n-html="sc_why1"><strong>Trade prices for verified barbers</strong> — the wholesale rate on professional lines.</li>
+          <li data-i18n-html="sc_why2"><strong>Free UK delivery over £50</strong> — a flat £4.99 under that.</li>
+          <li data-i18n-html="sc_why3"><strong>Secure checkout</strong> — card payments handled by Stripe.</li>
+          <li data-i18n-html="sc_why4"><strong>Real stock from the Go2Cut network</strong> — the products barbers reorder.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="serif" data-i18n="sc_cats_h">Shop by category</h3>
+    <p class="sc-cats" data-i18n-html="sc_cats">Aftershaves · Cream Colognes · Shaving Gels · Hair Waxes · Hair Gels · Powders · Conditioners · Beard Care · Hair Sprays · Shampoos · Tonics · Masks &amp; Scrubs · Hand &amp; Face · Combs &amp; Brushes · Maintenance · Gifts</p>
+
+    <h3 class="serif" data-i18n="sc_del_h">Delivery</h3>
+    <p data-i18n-html="sc_del_p">We currently deliver <strong>within the United Kingdom only</strong>. Standard UK delivery is <strong>free on orders over £50</strong>, otherwise £4.99. Orders are dispatched from the UK and delivery details are confirmed after checkout.</p>
+
+    <h3 class="serif" data-i18n="sc_faq_h">Frequently asked questions</h3>
+    <div class="sc-faq">
+      <details><summary data-i18n="sc_q1">Do barbers pay less than customers?</summary><p data-i18n="sc_a1">Yes. Verified barbers see trade (wholesale) prices across the range; customers see retail. Sign in to see your pricing.</p></details>
+      <details><summary data-i18n="sc_q2">How do I get trade prices?</summary><p data-i18n="sc_a2">Create a barber account and get verified. Once approved, trade prices unlock automatically at checkout.</p></details>
+      <details><summary data-i18n="sc_q3">Where do you deliver?</summary><p data-i18n="sc_a3">The Go2Cut store delivers within the United Kingdom only, with free delivery on orders over £50.</p></details>
+      <details><summary data-i18n="sc_q4">Is payment secure?</summary><p data-i18n="sc_a4">Yes — payments are processed securely by Stripe. We never store your card details.</p></details>
+    </div>
+  </section>
 </main>
 
 <!-- Cart drawer -->
 <div class="overlay" id="overlay"></div>
 <aside class="drawer" id="cart-drawer">
-  <div class="dhead"><h3>Your Cart</h3><button class="icon-btn" id="cart-close">✕</button></div>
+  <div class="dhead"><h3 data-i18n="cart_title">Your Cart</h3><button class="icon-btn" id="cart-close">✕</button></div>
   <div class="ditems" id="cart-items"></div>
   <div class="dfoot">
     <div id="cart-shipbar"></div>
-    <div class="row"><span style="color:var(--muted)">Subtotal</span><strong id="cart-subtotal" style="font-family:'Playfair Display',serif;font-size:20px">£0.00</strong></div>
-    <button class="btn btn-solid" style="width:100%" id="checkout-btn">Proceed to Checkout</button>
+    <div class="row"><span style="color:var(--muted)" data-i18n="cart_sub">Subtotal</span><strong id="cart-subtotal" style="font-family:'Playfair Display',serif;font-size:20px">£0.00</strong></div>
+    <button class="btn btn-solid" style="width:100%" id="checkout-btn" data-i18n="cart_checkout">Proceed to Checkout</button>
     <p style="font-size:12px;color:var(--muted);text-align:center;margin:10px 0 0" id="checkout-note"></p>
   </div>
 </aside>
@@ -211,10 +271,10 @@
 <!-- Auth modal -->
 <div class="modal" id="auth-modal">
   <h3 id="auth-title">Sign in</h3>
-  <p class="sub" style="margin:0 0 16px;font-size:13px" id="auth-desc">Access your barber or customer pricing.</p>
+  <p class="sub" style="margin:0 0 16px;font-size:13px" id="auth-desc" data-i18n="auth_desc">Access your barber or customer pricing.</p>
   <div class="tabs">
-    <div class="tab active" id="tab-login">Sign in</div>
-    <div class="tab" id="tab-register">Register</div>
+    <div class="tab active" id="tab-login" data-i18n="auth_tab_login">Sign in</div>
+    <div class="tab" id="tab-register" data-i18n="auth_tab_register">Register</div>
   </div>
   <form id="auth-form">
     <div class="field reg-only hide"><label>I am a…</label>
@@ -728,30 +788,57 @@ renderAccount(); renderCart(); loadProducts(); loadSettings();
 // index.html "Sign in / Register" → store.html?auth=1 ile gelince giris modalini ac
 if (!state.user && /[?&]auth=1/.test(location.search)) openAuth();
 </script>
-<!-- UK-only store bloklama -->
-<div id="geo-block" style="position:fixed;inset:0;z-index:9999;background:#131313;color:#e7e3d8;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;font-family:'Hanken Grotesk',system-ui,sans-serif">
-  <div style="max-width:440px">
-    <div style="font-size:44px;margin-bottom:14px">🇬🇧</div>
-    <h2 style="font-family:'Playfair Display',serif;color:#fff;font-size:24px;margin:0 0 10px">Store available in the UK</h2>
-    <p style="color:#a39e92;line-height:1.55;font-size:15px">Our barber &amp; grooming store currently ships within the United Kingdom only. The Go2Cut app is coming across Europe — <a href="index.html" style="color:#e5c484">learn more</a>.</p>
+<!-- UK teslimat bilgi şeridi — tam ekran engelin yerine; SAYFAYI ENGELLEMEZ -->
+<div id="uk-note" style="display:none;position:sticky;bottom:0;z-index:45;background:#1a1a1a;border-top:1px solid var(--line)">
+  <div class="wrap" style="display:flex;align-items:center;gap:12px;padding:11px 24px">
+    <span aria-hidden="true">🇬🇧</span>
+    <span style="flex:1;color:var(--muted);font-size:13.5px;line-height:1.45" data-i18n-html="uk_note">
+      The Go2Cut store currently delivers <strong style="color:var(--text)">within the UK only</strong>. The Go2Cut app is live across Europe — <a href="index.html">learn more</a>.
+    </span>
+    <button type="button" id="uk-note-x" aria-label="Dismiss" style="background:transparent;border:0;color:var(--muted);font-size:18px;cursor:pointer;padding:4px 8px;line-height:1">✕</button>
   </div>
 </div>
 <script>
-// UK-only store: dışarıdan gelene overlay ile kapat (gerçek satış-kilidi backend'de olmalı)
 (function(){
-  function gate(cc){
-    if (cc && cc !== 'GB'){
-      var b = document.getElementById('geo-block');
-      if (b){ b.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-    }
-  }
+  var dismissed = false; try { dismissed = sessionStorage.getItem('g2c_uknote') === '1'; } catch(e){}
+  function show(){ if (dismissed) return; var b = document.getElementById('uk-note'); if (b) b.style.display = 'block'; }
   var cc = null; try { cc = sessionStorage.getItem('g2c_country'); } catch(e){}
-  if (cc && cc !== 'GB') gate(cc);              // cache'li non-UK → hemen kapat
+  if (cc && cc !== 'GB') show();
   fetch('/geo.php').then(function(r){ return r.json(); }).then(function(d){
     var c = (d && d.country) || '';
     try { sessionStorage.setItem('g2c_country', c); } catch(e){}
-    gate(c);
+    if (c && c !== 'GB') show();
   }).catch(function(){});
+  var x = document.getElementById('uk-note-x');
+  if (x) x.onclick = function(){ var b = document.getElementById('uk-note'); if (b) b.style.display='none'; try{ sessionStorage.setItem('g2c_uknote','1'); }catch(e){} };
+})();
+</script>
+<script type="application/json" id="g2c-i18n">{"en": {}, "tr": {"nav_home": "Anasayfa", "nav_how": "Nasıl Çalışır", "nav_barbers": "Berberler İçin", "nav_customers": "Müşteriler İçin", "nav_faq": "SSS", "store_tab": "<span aria-hidden=\"true\">🛍️</span> Mağaza", "store_tab2": "<span aria-hidden=\"true\">🛍️</span> Mağaza", "st_title": "Berber &amp; Bakım Mağazası", "search_ph": "Ürün ara…", "cat_all": "Tüm kategoriler", "brand_all": "Tüm markalar", "cart_title": "Sepetin", "cart_sub": "Ara toplam", "cart_checkout": "Ödemeye Geç", "auth_desc": "Berber veya müşteri fiyatlarına eriş.", "auth_tab_login": "Giriş yap", "auth_tab_register": "Kayıt ol", "uk_note": "Go2Cut mağazası şu an yalnız <strong style=\"color:var(--text)\">Birleşik Krallık içine</strong> teslimat yapıyor. Go2Cut uygulaması Avrupa genelinde yayında — <a href=\"index.html\">daha fazla</a>.", "sc_h2": "Toptan fiyatına profesyonel berber &amp; bakım ürünleri", "sc_p1": "Go2Cut, berberler ve bakım meraklıları için Birleşik Krallık tedarik mağazasıdır. Doğrulanmış berberler <strong>toptan fiyatları</strong> açar; müşteriler aynı profesyonel seriyi perakende alır. Traş sonrası, krem kolonya, wax ve pomat, sakal bakımı, traş, tonik, pudra ve günlük salon aletleri — koltukta güvenilen markalardan.", "sc_p2": "Fiyatlarını görmek için <a href=\"javascript:void(0)\" data-login>giriş yap veya hesap oluştur</a>. Berber hesapları toptan fiyat açılmadan önce doğrulanır.", "sc_why_h": "Neden Go2Cut’tan sipariş", "sc_why1": "<strong>Doğrulanmış berberlere toptan fiyat</strong> — profesyonel seride toptan oran.", "sc_why2": "<strong>£50 üstü ücretsiz UK teslimatı</strong> — altında sabit £4,99.", "sc_why3": "<strong>Güvenli ödeme</strong> — kart ödemeleri Stripe ile.", "sc_why4": "<strong>Go2Cut ağından gerçek stok</strong> — berberlerin tekrar sipariş ettiği ürünler.", "sc_cats_h": "Kategoriye göre alışveriş", "sc_cats": "Traş Sonrası · Krem Kolonya · Traş Jelleri · Saç Wax · Saç Jeli · Pudralar · Kremler · Sakal Bakımı · Saç Spreyleri · Şampuanlar · Tonikler · Maske &amp; Peeling · El &amp; Yüz · Tarak &amp; Fırça · Bakım · Hediyeler", "sc_del_h": "Teslimat", "sc_del_p": "Şu an yalnız <strong>Birleşik Krallık içine</strong> teslimat yapıyoruz. Standart UK teslimatı <strong>£50 üstü siparişlerde ücretsiz</strong>, altında £4,99. Siparişler UK’den gönderilir; teslimat ayrıntıları ödemeden sonra netleşir.", "sc_faq_h": "Sıkça sorulan sorular", "sc_q1": "Berberler müşterilerden daha mı az öder?", "sc_a1": "Evet. Doğrulanmış berberler tüm seride toptan fiyat görür; müşteriler perakende. Fiyatını görmek için giriş yap.", "sc_q2": "Toptan fiyatı nasıl alırım?", "sc_a2": "Berber hesabı oluştur ve doğrulat. Onaylandığında toptan fiyatlar ödemede otomatik açılır.", "sc_q3": "Nereye teslimat yapıyorsunuz?", "sc_a3": "Go2Cut mağazası yalnız Birleşik Krallık içine teslimat yapar; £50 üstü ücretsiz.", "sc_q4": "Ödeme güvenli mi?", "sc_a4": "Evet — ödemeler Stripe ile güvenle işlenir. Kart bilgilerini asla saklamayız."}, "da": {"nav_home": "Hjem", "nav_how": "Sådan virker det", "nav_barbers": "For barberere", "nav_customers": "For kunder", "nav_faq": "FAQ", "store_tab": "<span aria-hidden=\"true\">🛍️</span> Butik", "store_tab2": "<span aria-hidden=\"true\">🛍️</span> Butik", "st_title": "Barber- &amp; plejebutik", "search_ph": "Søg produkter…", "cat_all": "Alle kategorier", "brand_all": "Alle mærker", "cart_title": "Din kurv", "cart_sub": "Subtotal", "cart_checkout": "Gå til kassen", "auth_desc": "Få adgang til dine barber- eller kundepriser.", "auth_tab_login": "Log ind", "auth_tab_register": "Opret", "uk_note": "Go2Cut-butikken leverer i øjeblikket kun <strong style=\"color:var(--text)\">inden for Storbritannien</strong>. Go2Cut-appen er live i hele Europa — <a href=\"index.html\">læs mere</a>.", "sc_h2": "Professionelle barber- &amp; plejeprodukter til engrospriser", "sc_p1": "Go2Cut er UK-forsyningsbutikken for barberere og plejeentusiaster. Verificerede barberere låser <strong>engrospriser</strong> op; kunder handler samme professionelle udvalg til detail. Aftershave, cremekolonjer, voks og pomader, skægpleje, barbering, tonic, pudder og de daglige salonværktøjer — fra mærker, man stoler på i stolen.", "sc_p2": "<a href=\"javascript:void(0)\" data-login>Log ind eller opret en konto</a> for at se dine priser. Barberkonti verificeres, før engrospriser låses op.", "sc_why_h": "Hvorfor bestille hos Go2Cut", "sc_why1": "<strong>Engrospriser til verificerede barberere</strong> — engrosprisen på professionelle serier.", "sc_why2": "<strong>Gratis UK-levering over £50</strong> — fast £4,99 derunder.", "sc_why3": "<strong>Sikker betaling</strong> — kortbetalinger håndteres af Stripe.", "sc_why4": "<strong>Ægte lager fra Go2Cut-netværket</strong> — de produkter barberere genbestiller.", "sc_cats_h": "Handl efter kategori", "sc_cats": "Aftershave · Cremekolonjer · Barbergel · Hårvoks · Hårgel · Pudder · Balsam · Skægpleje · Hårspray · Shampoo · Tonic · Masker &amp; scrub · Hånd &amp; ansigt · Kamme &amp; børster · Vedligehold · Gaver", "sc_del_h": "Levering", "sc_del_p": "Vi leverer i øjeblikket kun <strong>inden for Storbritannien</strong>. Standard UK-levering er <strong>gratis ved ordrer over £50</strong>, ellers £4,99. Ordrer sendes fra UK, og leveringsdetaljer bekræftes efter kassen.", "sc_faq_h": "Ofte stillede spørgsmål", "sc_q1": "Betaler barberere mindre end kunder?", "sc_a1": "Ja. Verificerede barberere ser engrospriser i hele udvalget; kunder ser detail. Log ind for at se dine priser.", "sc_q2": "Hvordan får jeg engrospriser?", "sc_a2": "Opret en barberkonto og bliv verificeret. Når du er godkendt, låses engrospriser automatisk op i kassen.", "sc_q3": "Hvor leverer I?", "sc_a3": "Go2Cut-butikken leverer kun inden for Storbritannien, med gratis levering over £50.", "sc_q4": "Er betaling sikker?", "sc_a4": "Ja — betalinger behandles sikkert af Stripe. Vi gemmer aldrig dine kortoplysninger."}, "fr": {"nav_home": "Accueil", "nav_how": "Comment ça marche", "nav_barbers": "Pour les barbiers", "nav_customers": "Pour les clients", "nav_faq": "FAQ", "store_tab": "<span aria-hidden=\"true\">🛍️</span> Boutique", "store_tab2": "<span aria-hidden=\"true\">🛍️</span> Boutique", "st_title": "Boutique barbier &amp; soins", "search_ph": "Rechercher des produits…", "cat_all": "Toutes les catégories", "brand_all": "Toutes les marques", "cart_title": "Votre panier", "cart_sub": "Sous-total", "cart_checkout": "Passer la commande", "auth_desc": "Accédez à vos tarifs barbier ou client.", "auth_tab_login": "Se connecter", "auth_tab_register": "S’inscrire", "uk_note": "La boutique Go2Cut livre actuellement <strong style=\"color:var(--text)\">uniquement au Royaume-Uni</strong>. L’appli Go2Cut est disponible dans toute l’Europe — <a href=\"index.html\">en savoir plus</a>.", "sc_h2": "Produits barbier &amp; soins professionnels à prix de gros", "sc_p1": "Go2Cut est la boutique d’approvisionnement britannique pour les barbiers et les passionnés de soins. Les barbiers vérifiés débloquent les <strong>prix de gros</strong> ; les clients achètent la même gamme professionnelle au détail. Après-rasage, eaux de Cologne crème, cires et pommades, soin de la barbe, rasage, toniques, poudres et les outils de salon du quotidien — des marques de confiance.", "sc_p2": "<a href=\"javascript:void(0)\" data-login>Connectez-vous ou créez un compte</a> pour voir vos tarifs. Les comptes barbier sont vérifiés avant le déblocage des prix de gros.", "sc_why_h": "Pourquoi commander chez Go2Cut", "sc_why1": "<strong>Prix de gros pour barbiers vérifiés</strong> — le tarif de gros sur les gammes pro.", "sc_why2": "<strong>Livraison UK gratuite dès £50</strong> — £4,99 forfaitaire en dessous.", "sc_why3": "<strong>Paiement sécurisé</strong> — paiements par carte gérés par Stripe.", "sc_why4": "<strong>Stock réel du réseau Go2Cut</strong> — les produits que les barbiers recommandent.", "sc_cats_h": "Acheter par catégorie", "sc_cats": "Après-rasage · Eaux de Cologne crème · Gels de rasage · Cires · Gels coiffants · Poudres · Après-shampoings · Soin barbe · Laques · Shampoings · Toniques · Masques &amp; gommages · Mains &amp; visage · Peignes &amp; brosses · Entretien · Cadeaux", "sc_del_h": "Livraison", "sc_del_p": "Nous livrons actuellement <strong>uniquement au Royaume-Uni</strong>. La livraison standard UK est <strong>gratuite dès £50</strong>, sinon £4,99. Les commandes partent du Royaume-Uni et les détails de livraison sont confirmés après le paiement.", "sc_faq_h": "Questions fréquentes", "sc_q1": "Les barbiers paient-ils moins que les clients ?", "sc_a1": "Oui. Les barbiers vérifiés voient les prix de gros sur toute la gamme ; les clients voient le détail. Connectez-vous pour voir vos tarifs.", "sc_q2": "Comment obtenir les prix de gros ?", "sc_a2": "Créez un compte barbier et faites-le vérifier. Une fois approuvé, les prix de gros se débloquent automatiquement au paiement.", "sc_q3": "Où livrez-vous ?", "sc_a3": "La boutique Go2Cut livre uniquement au Royaume-Uni, avec livraison gratuite dès £50.", "sc_q4": "Le paiement est-il sécurisé ?", "sc_a4": "Oui — les paiements sont traités en sécurité par Stripe. Nous ne stockons jamais vos données de carte."}, "de": {"nav_home": "Startseite", "nav_how": "So funktioniert’s", "nav_barbers": "Für Barbiere", "nav_customers": "Für Kunden", "nav_faq": "FAQ", "store_tab": "<span aria-hidden=\"true\">🛍️</span> Shop", "store_tab2": "<span aria-hidden=\"true\">🛍️</span> Shop", "st_title": "Barber- &amp; Pflegeshop", "search_ph": "Produkte suchen…", "cat_all": "Alle Kategorien", "brand_all": "Alle Marken", "cart_title": "Dein Warenkorb", "cart_sub": "Zwischensumme", "cart_checkout": "Zur Kasse", "auth_desc": "Greife auf deine Barbier- oder Kundenpreise zu.", "auth_tab_login": "Anmelden", "auth_tab_register": "Registrieren", "uk_note": "Der Go2Cut-Shop liefert derzeit <strong style=\"color:var(--text)\">nur innerhalb Großbritanniens</strong>. Die Go2Cut-App ist in ganz Europa live — <a href=\"index.html\">mehr erfahren</a>.", "sc_h2": "Professionelle Barber- &amp; Pflegeprodukte zu Großhandelspreisen", "sc_p1": "Go2Cut ist der UK-Versorgungsshop für Barbiere und Pflege-Fans. Verifizierte Barbiere schalten <strong>Großhandelspreise</strong> frei; Kunden kaufen dasselbe professionelle Sortiment zum Einzelhandelspreis. Aftershaves, Cremecolognes, Wachse und Pomaden, Bartpflege, Rasur, Tonics, Puder und die täglichen Salonwerkzeuge — von Marken, denen man am Stuhl vertraut.", "sc_p2": "<a href=\"javascript:void(0)\" data-login>Melde dich an oder erstelle ein Konto</a>, um deine Preise zu sehen. Barbier-Konten werden verifiziert, bevor Großhandelspreise freigeschaltet werden.", "sc_why_h": "Warum bei Go2Cut bestellen", "sc_why1": "<strong>Großhandelspreise für verifizierte Barbiere</strong> — der Großhandelspreis auf Profi-Linien.", "sc_why2": "<strong>Kostenloser UK-Versand ab £50</strong> — darunter pauschal £4,99.", "sc_why3": "<strong>Sichere Kasse</strong> — Kartenzahlungen über Stripe.", "sc_why4": "<strong>Echter Bestand aus dem Go2Cut-Netzwerk</strong> — die Produkte, die Barbiere nachbestellen.", "sc_cats_h": "Nach Kategorie einkaufen", "sc_cats": "Aftershaves · Cremecolognes · Rasiergele · Haarwachse · Haargele · Puder · Conditioner · Bartpflege · Haarsprays · Shampoos · Tonics · Masken &amp; Peelings · Hand &amp; Gesicht · Kämme &amp; Bürsten · Pflege · Geschenke", "sc_del_h": "Lieferung", "sc_del_p": "Wir liefern derzeit <strong>nur innerhalb Großbritanniens</strong>. Der UK-Standardversand ist <strong>ab £50 kostenlos</strong>, sonst £4,99. Bestellungen werden aus UK versandt; Lieferdetails werden nach der Kasse bestätigt.", "sc_faq_h": "Häufige Fragen", "sc_q1": "Zahlen Barbiere weniger als Kunden?", "sc_a1": "Ja. Verifizierte Barbiere sehen Großhandelspreise im gesamten Sortiment; Kunden sehen Einzelhandel. Melde dich an, um deine Preise zu sehen.", "sc_q2": "Wie bekomme ich Großhandelspreise?", "sc_a2": "Erstelle ein Barbier-Konto und lass es verifizieren. Nach der Freigabe werden Großhandelspreise an der Kasse automatisch freigeschaltet.", "sc_q3": "Wohin liefert ihr?", "sc_a3": "Der Go2Cut-Shop liefert nur innerhalb Großbritanniens, mit kostenlosem Versand ab £50.", "sc_q4": "Ist die Zahlung sicher?", "sc_a4": "Ja — Zahlungen werden sicher über Stripe abgewickelt. Wir speichern deine Kartendaten nie."}, "it": {"nav_home": "Home", "nav_how": "Come funziona", "nav_barbers": "Per i barbieri", "nav_customers": "Per i clienti", "nav_faq": "FAQ", "store_tab": "<span aria-hidden=\"true\">🛍️</span> Negozio", "store_tab2": "<span aria-hidden=\"true\">🛍️</span> Negozio", "st_title": "Negozio barbiere &amp; cura", "search_ph": "Cerca prodotti…", "cat_all": "Tutte le categorie", "brand_all": "Tutte le marche", "cart_title": "Il tuo carrello", "cart_sub": "Subtotale", "cart_checkout": "Vai al pagamento", "auth_desc": "Accedi ai tuoi prezzi barbiere o cliente.", "auth_tab_login": "Accedi", "auth_tab_register": "Registrati", "uk_note": "Il negozio Go2Cut al momento consegna <strong style=\"color:var(--text)\">solo nel Regno Unito</strong>. L’app Go2Cut è disponibile in tutta Europa — <a href=\"index.html\">scopri di più</a>.", "sc_h2": "Prodotti professionali da barbiere &amp; cura a prezzi all’ingrosso", "sc_p1": "Go2Cut è il negozio di forniture del Regno Unito per barbieri e appassionati di cura. I barbieri verificati sbloccano i <strong>prezzi all’ingrosso</strong>; i clienti acquistano la stessa gamma professionale al dettaglio. Dopobarba, colonie in crema, cere e pomate, cura della barba, rasatura, tonici, polveri e gli strumenti da salone di ogni giorno — dai marchi di fiducia.", "sc_p2": "<a href=\"javascript:void(0)\" data-login>Accedi o crea un account</a> per vedere i tuoi prezzi. Gli account barbiere vengono verificati prima di sbloccare i prezzi all’ingrosso.", "sc_why_h": "Perché ordinare da Go2Cut", "sc_why1": "<strong>Prezzi all’ingrosso per barbieri verificati</strong> — la tariffa all’ingrosso sulle linee pro.", "sc_why2": "<strong>Consegna UK gratuita oltre £50</strong> — £4,99 fisso sotto tale soglia.", "sc_why3": "<strong>Pagamento sicuro</strong> — pagamenti con carta gestiti da Stripe.", "sc_why4": "<strong>Stock reale dalla rete Go2Cut</strong> — i prodotti che i barbieri riordinano.", "sc_cats_h": "Acquista per categoria", "sc_cats": "Dopobarba · Colonie in crema · Gel da rasatura · Cere · Gel per capelli · Polveri · Balsami · Cura barba · Lacche · Shampoo · Tonici · Maschere &amp; scrub · Mani &amp; viso · Pettini &amp; spazzole · Manutenzione · Regali", "sc_del_h": "Consegna", "sc_del_p": "Al momento consegniamo <strong>solo nel Regno Unito</strong>. La consegna standard UK è <strong>gratuita per ordini oltre £50</strong>, altrimenti £4,99. Gli ordini partono dal Regno Unito e i dettagli di consegna sono confermati dopo il pagamento.", "sc_faq_h": "Domande frequenti", "sc_q1": "I barbieri pagano meno dei clienti?", "sc_a1": "Sì. I barbieri verificati vedono i prezzi all’ingrosso sull’intera gamma; i clienti vedono il dettaglio. Accedi per vedere i tuoi prezzi.", "sc_q2": "Come ottengo i prezzi all’ingrosso?", "sc_a2": "Crea un account barbiere e fatti verificare. Una volta approvato, i prezzi all’ingrosso si sbloccano automaticamente al pagamento.", "sc_q3": "Dove consegnate?", "sc_a3": "Il negozio Go2Cut consegna solo nel Regno Unito, con consegna gratuita oltre £50.", "sc_q4": "Il pagamento è sicuro?", "sc_a4": "Sì — i pagamenti sono elaborati in sicurezza da Stripe. Non memorizziamo mai i dati della tua carta."}, "es": {"nav_home": "Inicio", "nav_how": "Cómo funciona", "nav_barbers": "Para barberos", "nav_customers": "Para clientes", "nav_faq": "FAQ", "store_tab": "<span aria-hidden=\"true\">🛍️</span> Tienda", "store_tab2": "<span aria-hidden=\"true\">🛍️</span> Tienda", "st_title": "Tienda de barbería &amp; cuidado", "search_ph": "Buscar productos…", "cat_all": "Todas las categorías", "brand_all": "Todas las marcas", "cart_title": "Tu carrito", "cart_sub": "Subtotal", "cart_checkout": "Ir al pago", "auth_desc": "Accede a tus precios de barbero o cliente.", "auth_tab_login": "Iniciar sesión", "auth_tab_register": "Registrarse", "uk_note": "La tienda Go2Cut actualmente envía <strong style=\"color:var(--text)\">solo dentro del Reino Unido</strong>. La app Go2Cut está disponible en toda Europa — <a href=\"index.html\">más información</a>.", "sc_h2": "Productos profesionales de barbería &amp; cuidado a precios de mayorista", "sc_p1": "Go2Cut es la tienda de suministros del Reino Unido para barberos y aficionados al cuidado. Los barberos verificados desbloquean <strong>precios de mayorista</strong>; los clientes compran la misma gama profesional al por menor. Aftershave, colonias en crema, ceras y pomadas, cuidado de la barba, afeitado, tónicos, polvos y las herramientas de salón de cada día — de marcas de confianza.", "sc_p2": "<a href=\"javascript:void(0)\" data-login>Inicia sesión o crea una cuenta</a> para ver tus precios. Las cuentas de barbero se verifican antes de desbloquear los precios de mayorista.", "sc_why_h": "Por qué comprar en Go2Cut", "sc_why1": "<strong>Precios de mayorista para barberos verificados</strong> — la tarifa mayorista en líneas profesionales.", "sc_why2": "<strong>Envío gratis en UK desde £50</strong> — £4,99 fijo por debajo.", "sc_why3": "<strong>Pago seguro</strong> — pagos con tarjeta gestionados por Stripe.", "sc_why4": "<strong>Stock real de la red Go2Cut</strong> — los productos que los barberos reponen.", "sc_cats_h": "Comprar por categoría", "sc_cats": "Aftershave · Colonias en crema · Geles de afeitar · Ceras · Geles · Polvos · Acondicionadores · Cuidado de barba · Lacas · Champús · Tónicos · Mascarillas &amp; exfoliantes · Manos &amp; rostro · Peines &amp; cepillos · Mantenimiento · Regalos", "sc_del_h": "Envío", "sc_del_p": "Actualmente enviamos <strong>solo dentro del Reino Unido</strong>. El envío estándar en UK es <strong>gratis en pedidos superiores a £50</strong>, si no £4,99. Los pedidos se envían desde el Reino Unido y los detalles de entrega se confirman tras el pago.", "sc_faq_h": "Preguntas frecuentes", "sc_q1": "¿Los barberos pagan menos que los clientes?", "sc_a1": "Sí. Los barberos verificados ven precios de mayorista en toda la gama; los clientes ven el precio de venta. Inicia sesión para ver tus precios.", "sc_q2": "¿Cómo consigo precios de mayorista?", "sc_a2": "Crea una cuenta de barbero y verifícala. Una vez aprobada, los precios de mayorista se desbloquean automáticamente en el pago.", "sc_q3": "¿Dónde entregáis?", "sc_a3": "La tienda Go2Cut entrega solo dentro del Reino Unido, con envío gratis desde £50.", "sc_q4": "¿Es seguro el pago?", "sc_a4": "Sí — los pagos se procesan de forma segura con Stripe. Nunca guardamos los datos de tu tarjeta."}, "no": {"nav_home": "Hjem", "nav_how": "Slik fungerer det", "nav_barbers": "For barberere", "nav_customers": "For kunder", "nav_faq": "FAQ", "store_tab": "<span aria-hidden=\"true\">🛍️</span> Butikk", "store_tab2": "<span aria-hidden=\"true\">🛍️</span> Butikk", "st_title": "Barber- &amp; pleiebutikk", "search_ph": "Søk etter produkter…", "cat_all": "Alle kategorier", "brand_all": "Alle merker", "cart_title": "Handlekurven din", "cart_sub": "Delsum", "cart_checkout": "Gå til kassen", "auth_desc": "Få tilgang til dine barber- eller kundepriser.", "auth_tab_login": "Logg inn", "auth_tab_register": "Registrer", "uk_note": "Go2Cut-butikken leverer for øyeblikket bare <strong style=\"color:var(--text)\">innenfor Storbritannia</strong>. Go2Cut-appen er live i hele Europa — <a href=\"index.html\">les mer</a>.", "sc_h2": "Profesjonelle barber- &amp; pleieprodukter til engrospriser", "sc_p1": "Go2Cut er UK-forsyningsbutikken for barberere og pleieentusiaster. Verifiserte barberere låser opp <strong>engrospriser</strong>; kunder handler samme profesjonelle utvalg til utsalgspris. Aftershave, kremkolonjer, voks og pomade, skéggpleie, barbering, tonic, pudder og de daglige salongverktøyene — fra merker du stoler på i stolen.", "sc_p2": "<a href=\"javascript:void(0)\" data-login>Logg inn eller opprett en konto</a> for å se prisene dine. Barberkontoer verifiseres før engrospriser låses opp.", "sc_why_h": "Hvorfor bestille hos Go2Cut", "sc_why1": "<strong>Engrospriser for verifiserte barberere</strong> — engrosprisen på profesjonelle serier.", "sc_why2": "<strong>Gratis UK-levering over £50</strong> — fast £4,99 under det.", "sc_why3": "<strong>Sikker betaling</strong> — kortbetalinger håndteres av Stripe.", "sc_why4": "<strong>Ekte lager fra Go2Cut-nettverket</strong> — produktene barberere bestiller på nytt.", "sc_cats_h": "Handle etter kategori", "sc_cats": "Aftershave · Kremkolonjer · Barbergel · Hårvoks · Hårgel · Pudder · Balsam · Skéggpleie · Hårspray · Sjampo · Tonic · Masker &amp; skrubb · Hender &amp; ansikt · Kammer &amp; børster · Vedlikehold · Gaver", "sc_del_h": "Levering", "sc_del_p": "Vi leverer for øyeblikket bare <strong>innenfor Storbritannia</strong>. Standard UK-levering er <strong>gratis på ordrer over £50</strong>, ellers £4,99. Ordrer sendes fra UK, og leveringsdetaljer bekreftes etter kassen.", "sc_faq_h": "Ofte stilte spørsmål", "sc_q1": "Betaler barberere mindre enn kunder?", "sc_a1": "Ja. Verifiserte barberere ser engrospriser i hele utvalget; kunder ser utsalgspris. Logg inn for å se prisene dine.", "sc_q2": "Hvordan får jeg engrospriser?", "sc_a2": "Opprett en barberkonto og bli verifisert. Når du er godkjent, låses engrospriser automatisk opp i kassen.", "sc_q3": "Hvor leverer dere?", "sc_a3": "Go2Cut-butikken leverer bare innenfor Storbritannia, med gratis levering over £50.", "sc_q4": "Er betaling sikker?", "sc_a4": "Ja — betalinger behandles sikkert av Stripe. Vi lagrer aldri kortopplysningene dine."}}</script>
+<script>
+(function(){
+  var SUP=["en","tr","da","fr","de","it","es","no"];
+  var C2L={GB:"en",IE:"en",US:"en",AU:"en",DK:"da",TR:"tr",FR:"fr",BE:"fr",DE:"de",AT:"de",CH:"de",IT:"it",ES:"es",NO:"no"};
+  var LAB={en:"English",tr:"Türkçe",da:"Dansk",fr:"Français",de:"Deutsch",it:"Italiano",es:"Español",no:"Norsk"};
+  var I={}; try{ I=JSON.parse(document.getElementById("g2c-i18n").textContent)||{}; }catch(e){}
+  var nodes=[]; document.querySelectorAll("[data-i18n],[data-i18n-html]").forEach(function(el){
+    var h=el.hasAttribute("data-i18n-html"), k=el.getAttribute(h?"data-i18n-html":"data-i18n");
+    nodes.push({el:el,k:k,h:h,en:h?el.innerHTML:el.textContent}); });
+  var phs=[]; document.querySelectorAll("[data-i18n-ph]").forEach(function(el){ phs.push({el:el,k:el.getAttribute("data-i18n-ph"),en:el.getAttribute("placeholder")}); });
+  function tv(l,k,en){ var d=I[l]; return (d&&d[k]!=null)?d[k]:en; }
+  function apply(l){
+    nodes.forEach(function(n){ var v=tv(l,n.k,n.en); if(n.h)n.el.innerHTML=v; else n.el.textContent=v; });
+    phs.forEach(function(n){ n.el.setAttribute("placeholder",tv(l,n.k,n.en)); });
+    try{ document.documentElement.setAttribute("lang", l==="en"?"en-GB":l); }catch(e){}
+    var c=document.getElementById("g2c-lang-cur"); if(c)c.textContent=(LAB[l]||"English");
+  }
+  window.G2CsetLang=function(l,p){ if(SUP.indexOf(l)<0)l="en"; if(p){try{localStorage.setItem("g2c_lang",l);}catch(e){}} apply(l); };
+  function pick(cc){ var s=null; try{s=localStorage.getItem("g2c_lang");}catch(e){} if(s&&SUP.indexOf(s)>=0)return s; if(cc&&C2L[cc])return C2L[cc]; var n=(navigator.language||"en").slice(0,2).toLowerCase(); return SUP.indexOf(n)>=0?n:"en"; }
+  var cc=null; try{cc=sessionStorage.getItem("g2c_country");}catch(e){}
+  apply(pick(cc));
+  if(cc===null){ fetch("/geo.php").then(function(r){return r.json();}).then(function(d){ var c=(d&&d.country)||""; try{sessionStorage.setItem("g2c_country",c);}catch(e){} var s=null; try{s=localStorage.getItem("g2c_lang");}catch(e){} if(!s)apply(pick(c)); }).catch(function(){}); }
+  var b=document.getElementById("g2c-lang-btn"), m=document.getElementById("g2c-lang-menu");
+  if(b&&m){ b.addEventListener("click",function(e){e.stopPropagation();m.hidden=!m.hidden;}); document.addEventListener("click",function(){m.hidden=true;}); m.addEventListener("click",function(e){e.stopPropagation();});
+    m.querySelectorAll("[data-lang]").forEach(function(x){ x.addEventListener("click",function(){ window.G2CsetLang(x.getAttribute("data-lang"),true); m.hidden=true; }); }); }
 })();
 </script>
 </body>
