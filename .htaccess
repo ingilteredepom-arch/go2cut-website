@@ -21,3 +21,9 @@ RewriteRule ^ https://go2cut.co.uk%{REQUEST_URI} [R=301,L]
 
 # CSP: Tailwind Play CDN + inline script'ler 'unsafe-inline'/'unsafe-eval' gerektirir →
 # anlamli CSP icin once Tailwind build + script'leri disa al (deploy listesinde F4-ileri).
+
+# ===== Açılış = Store: go2cut.co.uk/ → store.html (berber-app /index.html'de kalır) =====
+DirectoryIndex store.html index.html
+# Eski /store.html'i köke 301'le (çift içerik olmasın; yalnız gerçek tarayıcı isteğinde)
+RewriteCond %{THE_REQUEST} \s/+store\.html[\s?] [NC]
+RewriteRule ^store\.html$ https://go2cut.co.uk/ [R=301,L]
